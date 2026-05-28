@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Horarios from "./pages/Horarios";
 import Sucursales from "./pages/Sucursales";
 import Equipo from "./pages/Equipo";
+import WaitlistCrashApp from "./pages/WaitlistCrashApp";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/horarios" element={<Horarios />} />
           <Route path="/sucursales" element={<Sucursales />} />
           <Route path="/equipo" element={<Equipo />} />
+          <Route path="/waitlist_crash_app" element={<WaitlistCrashApp />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
