@@ -28,6 +28,7 @@ const Navbar = () => {
     { to: "/sucursales", label: "Sucursales" },
     { to: "/horarios", label: "Horarios" },
     { to: "/equipo", label: "Equipo" },
+    { to: "/waitlist_crash_app", label: "App" },
   ];
 
   return (
