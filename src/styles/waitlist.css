@@ -45,7 +45,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 0.65rem 1.5rem;
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.22em;
   display: flex;
@@ -88,7 +88,7 @@ body {
   white-space: nowrap;
 }
 .wl-ticker-item {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   color: var(--wl-muted);
@@ -129,7 +129,7 @@ body {
 }
 
 .wl-h1 {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: clamp(3.5rem, 10vw, 8rem);
   line-height: 0.92;
   letter-spacing: 0.02em;
@@ -170,25 +170,6 @@ body {
   filter: drop-shadow(0 0 5px rgba(0, 102, 255, 0.55));
 }
 .wl-runner-svg circle { fill: var(--wl-blue); }
-.wl-runner-back { opacity: 0.5; }
-
-/* Cada segmento pivota en el extremo superior (articulación). Los puntos se
-   generan simétricos en x, así el top-center del bounding-box cae en la junta. */
-.wl-seg { transform-box: fill-box; transform-origin: 50% 0%; }
-
-.wl-run-bob { animation: wl-runBob 0.72s linear infinite; }
-.wl-leg-l   { animation: wl-runThigh 0.72s linear infinite; }
-.wl-leg-r   { animation: wl-runThigh 0.72s linear infinite; animation-delay: -0.36s; }
-.wl-shin-l  { animation: wl-runShin 0.72s linear infinite; }
-.wl-shin-r  { animation: wl-runShin 0.72s linear infinite; animation-delay: -0.36s; }
-.wl-arm-l   { animation: wl-runUpper 0.72s linear infinite; animation-delay: -0.36s; }
-.wl-arm-r   { animation: wl-runUpper 0.72s linear infinite; }
-.wl-fore-l  { animation: wl-runFore 0.72s linear infinite; animation-delay: -0.36s; }
-.wl-fore-r  { animation: wl-runFore 0.72s linear infinite; }
-
-@media (prefers-reduced-motion: reduce) {
-  .wl-run-bob, .wl-seg { animation: none !important; }
-}
 
 .wl-scatter {
   position: absolute;
@@ -228,7 +209,7 @@ body {
   position: absolute;
   right: -0.5rem; top: 50%;
   transform: translateY(-50%) rotate(90deg);
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 5rem;
   color: var(--wl-red);
   opacity: 0.07;
@@ -245,7 +226,7 @@ body {
   gap: 0.4rem;
 }
 .wl-offer-title {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   line-height: 1;
   color: var(--wl-white);
@@ -262,14 +243,14 @@ body {
   margin-bottom: 0.2rem;
 }
 .wl-price-new {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: clamp(2.5rem, 6vw, 3.8rem);
   color: var(--wl-red);
   line-height: 1;
   display: block;
 }
 .wl-price-usd {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 1.2rem;
   color: var(--wl-white);
   opacity: 0.6;
@@ -302,7 +283,7 @@ body {
 .wl-stat { flex: 1; padding: 1.5rem 2rem; border-right: 1px solid var(--wl-mid); }
 .wl-stat:last-child { border-right: none; }
 .wl-stat-num {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 2.8rem;
   color: var(--wl-blue);
   line-height: 1;
@@ -348,7 +329,7 @@ body {
   content: attr(data-num);
   position: absolute;
   top: 1rem; right: 1.2rem;
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 3.5rem;
   color: var(--wl-mid);
   line-height: 1;
@@ -384,7 +365,7 @@ body {
 }
 .wl-form-header { margin-bottom: 2.5rem; }
 .wl-form-h2 {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 0.95;
   margin-bottom: 0.8rem;
@@ -432,7 +413,7 @@ body {
   background: var(--wl-blue);
   color: #fff;
   border: none;
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: 0.15em;
   padding: 1.2rem 2rem;
@@ -470,7 +451,7 @@ body {
 }
 .wl-success-icon { margin-bottom: 1.5rem; color: var(--wl-blue); }
 .wl-success-h3 {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: var(--wl-white);
@@ -494,7 +475,7 @@ body {
 .wl-footer-brand .wl-logo { font-size: 1.6rem; display: block; margin-bottom: 0.8rem; }
 .wl-footer-brand p { font-size: 0.65rem; color: var(--wl-muted); line-height: 1.7; max-width: 220px; }
 .wl-footer-col-title {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Orbitron', sans-serif; font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.2em;
   color: var(--wl-white);
@@ -551,38 +532,6 @@ body {
 @keyframes wl-shimmer {
   0%   { left: -100%; }
   100% { left: 200%; }
-}
-/* Ciclo de carrera: cadera, rodilla, hombro, codo + rebote del cuerpo */
-@keyframes wl-runBob {
-  0%, 100% { transform: translateY(0); }
-  25%      { transform: translateY(-7px); }
-  50%      { transform: translateY(0); }
-  75%      { transform: translateY(-7px); }
-}
-@keyframes wl-runThigh {
-  0%   { transform: rotate(32deg); }
-  30%  { transform: rotate(-10deg); }
-  50%  { transform: rotate(-35deg); }
-  80%  { transform: rotate(5deg); }
-  100% { transform: rotate(32deg); }
-}
-@keyframes wl-runShin {
-  0%   { transform: rotate(8deg); }
-  25%  { transform: rotate(45deg); }
-  50%  { transform: rotate(12deg); }
-  65%  { transform: rotate(82deg); }
-  85%  { transform: rotate(55deg); }
-  100% { transform: rotate(8deg); }
-}
-@keyframes wl-runUpper {
-  0%   { transform: rotate(-35deg); }
-  50%  { transform: rotate(40deg); }
-  100% { transform: rotate(-35deg); }
-}
-@keyframes wl-runFore {
-  0%   { transform: rotate(50deg); }
-  50%  { transform: rotate(78deg); }
-  100% { transform: rotate(50deg); }
 }
 @keyframes wl-scatterDrift {
   0%   { transform: translate(0, 0); }
