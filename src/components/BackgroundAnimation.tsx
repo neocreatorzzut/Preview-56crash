@@ -2,8 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const PARTICLE_COUNT = 70;
-const MAX_DIST = 150;
+const PARTICLE_COUNT = 130;
 // Brand primary: #173DED = rgb(23, 61, 237)
 const RGB = "23, 61, 237";
 
@@ -25,72 +24,50 @@ export default function BackgroundAnimation() {
     };
     setSize();
 
-    const rand = (min: number, max: number) => Math.random() * (max - min) + min;
+    const rand = (a: number, b: number) => Math.random() * (b - a) + a;
 
-    type P = {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      r: number;
-      drift: number;
-      phase: number;
+    type P = { x: number; y: number; speed: number; size: number; opacity: number };
+
+    const particles: P[] = Array.from({ length: PARTICLE_COUNT }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      speed: rand(1.0, 2.4),
+      size: rand(0.5, 1.8),
+      opacity: rand(0.3, 0.75),
+    }));
+
+    // Flow field: combined sine/cosine field that evolves over time
+    // Creates swirling tornado + wave patterns
+    const angle = (x: number, y: number, time: number): number => {
+      const s = 0.0028;
+      return (
+        Math.sin(x * s + time * 0.45) * Math.cos(y * s - time * 0.35) * Math.PI * 2 +
+        Math.cos(x * s * 0.6 - time * 0.25) * Math.sin(y * s * 0.8 + time * 0.2) * Math.PI
+      );
     };
 
-    const spawn = (atBottom = false): P => ({
-      x: Math.random() * canvas.width,
-      y: atBottom ? canvas.height + rand(0, 40) : Math.random() * canvas.height,
-      vx: rand(-0.25, 0.25),
-      vy: rand(-0.9, -0.45), // energía que sube
-      r: rand(0.6, 2.2),
-      drift: rand(0.4, 1.2),
-      phase: Math.random() * Math.PI * 2,
-    });
-
-    const particles: P[] = Array.from({ length: PARTICLE_COUNT }, () => spawn());
-
     const tick = () => {
-      t += 0.016;
-      // Pulso rítmico tipo latido / ritmo de entreno (oleadas de energía)
-      const pulse = 0.5 + 0.5 * Math.sin(t * 2.4);
-      const speed = 0.85 + pulse * 0.9; // acelera en cada oleada
+      t += 0.007;
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Semi-transparent fill instead of clearRect → builds trailing streaks
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       for (const p of particles) {
-        // deriva horizontal ondulante para más dinamismo
-        p.x += (p.vx + Math.sin(t * 1.5 + p.phase) * 0.35 * p.drift) * speed;
-        p.y += p.vy * speed;
+        const a = angle(p.x, p.y, t);
+        p.x += Math.cos(a) * p.speed;
+        p.y += Math.sin(a) * p.speed;
 
-        // reciclar: al salir por arriba reaparece abajo (flujo continuo ascendente)
-        if (p.y < -20) Object.assign(p, spawn(true));
-        if (p.x < -20) p.x = canvas.width + 20;
-        if (p.x > canvas.width + 20) p.x = -20;
-
-        const glow = 0.45 + pulse * 0.45;
-        const r = p.r * (0.85 + pulse * 0.4); // laten con el pulso
+        // Wrap around edges
+        if (p.x < -2) p.x = canvas.width + 2;
+        if (p.x > canvas.width + 2) p.x = -2;
+        if (p.y < -2) p.y = canvas.height + 2;
+        if (p.y > canvas.height + 2) p.y = -2;
 
         ctx.beginPath();
-        ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${RGB}, ${glow})`;
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${RGB}, ${p.opacity})`;
         ctx.fill();
-      }
-
-      const lineBoost = 0.18 + pulse * 0.22;
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const d = Math.hypot(dx, dy);
-          if (d < MAX_DIST) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(${RGB}, ${lineBoost * (1 - d / MAX_DIST)})`;
-            ctx.lineWidth = 0.6;
-            ctx.stroke();
-          }
-        }
       }
 
       raf = requestAnimationFrame(tick);
