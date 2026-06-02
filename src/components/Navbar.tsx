@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
@@ -17,18 +16,18 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "#servicios", label: "Servicios" },
-    { href: "#equipamiento", label: "Equipamiento" },
-    { href: "#coaches", label: "Coaches" },
-    { href: "#planes", label: "Planes" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "/#servicios", label: "Servicios" },
+    { href: "/#equipamiento", label: "Equipamiento" },
+    { href: "/#coaches", label: "Coaches" },
+    { href: "/#planes", label: "Planes" },
+    { href: "/#contacto", label: "Contacto" },
   ];
 
   const pageLinks = [
-    { to: "/sucursales", label: "Sucursales" },
-    { to: "/horarios", label: "Horarios" },
-    { to: "/equipo", label: "Equipo" },
-    { to: "/waitlist_crash_app", label: "App" },
+    { href: "/sucursales", label: "Sucursales" },
+    { href: "/horarios", label: "Horarios" },
+    { href: "/equipo", label: "Equipo" },
+    { href: "/waitlist_crash_app", label: "App" },
   ];
 
   return (
@@ -39,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="Crash Training" className="h-10 w-auto" />
         </a>
 
@@ -55,19 +54,19 @@ const Navbar = () => {
             </a>
           ))}
           {pageLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
+            <a
+              key={link.href}
+              href={link.href}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <a href="#planes">
+          <a href="/#planes">
             <Button variant="glow" size="lg">
               Únete Ahora
             </Button>
@@ -98,16 +97,16 @@ const Navbar = () => {
               </a>
             ))}
             {pageLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
+              <a
+                key={link.href}
+                href={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
-            <a href="#planes" onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="/#planes" onClick={() => setIsMobileMenuOpen(false)}>
               <Button variant="glow" className="w-full mt-2">
                 Únete Ahora
               </Button>

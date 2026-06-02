@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowLeft, MapPin, Clock, Phone, Navigation } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -55,13 +54,13 @@ const Sucursales = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/8 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <Link
-            to="/"
+          <a
+            href="/"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
-          </Link>
+          </a>
 
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-4">
