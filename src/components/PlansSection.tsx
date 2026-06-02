@@ -94,6 +94,18 @@ const savingsPlans = [
   },
 ];
 
+const paymentCards = [
+  { src: "/assets/pay-visa.webp", alt: "Visa" },
+  { src: "/assets/pay-mastercard.webp", alt: "Mastercard" },
+  { src: "/assets/pay-amex.webp", alt: "American Express" },
+  { src: "/assets/pay-discover.webp", alt: "Discover" },
+];
+
+const paymentLocal = [
+  { src: "/assets/pay-bancolombia.webp", alt: "Bancolombia" },
+  { src: "/assets/pay-nequi.webp", alt: "Nequi" },
+];
+
 const getWhatsAppUrl = (planName: string, planPrice: string) => {
   const message = encodeURIComponent(
     `¡Hola! Estoy interesado en el plan *${planName}* ($${planPrice}). Me gustaría obtener más información.`
@@ -221,6 +233,47 @@ const PlansSection = () => {
               </a>
             </div>
           ))}
+        </div>
+
+        {/* Payment Methods */}
+        <div className="mt-12 flex flex-col items-center gap-4">
+          <span className="text-sm font-medium tracking-widest text-muted-foreground uppercase">
+            Métodos de pago aceptados:
+          </span>
+          {/* Top row — tarjetas */}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            {paymentCards.map((m) => (
+              <div
+                key={m.alt}
+                className="bg-white h-11 px-4 flex items-center justify-center"
+              >
+                <img
+                  src={m.src}
+                  alt={m.alt}
+                  className="h-7 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+          {/* Bottom row — Bancolombia y Nequi */}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            {paymentLocal.map((m) => (
+              <div
+                key={m.alt}
+                className="bg-white h-11 px-4 flex items-center justify-center"
+              >
+                <img
+                  src={m.src}
+                  alt={m.alt}
+                  className="h-6 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Footnote */}
