@@ -31,7 +31,7 @@ const columns: Record<string, { label: string; href: string }[]> = {
 
 const Footer = () => {
   return (
-    <footer style={{ background: "#0a0a0a", borderTop: "1px solid #1a1a1a" }} className="pt-14">
+    <footer style={{ background: "transparent", borderTop: "1px solid #1a1a1a" }} className="pt-14">
       <div className="container mx-auto px-4">
 
         {/* Top grid */}
