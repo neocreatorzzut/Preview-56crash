@@ -241,37 +241,29 @@ const PlansSection = () => {
             Métodos de pago aceptados:
           </span>
           {/* Top row — tarjetas */}
-          <div className="flex flex-wrap justify-center items-center gap-3">
+          <div className="flex flex-wrap justify-center items-center gap-4">
             {paymentCards.map((m) => (
-              <div
+              <img
                 key={m.alt}
-                className="bg-white h-11 px-4 flex items-center justify-center"
-              >
-                <img
-                  src={m.src}
-                  alt={m.alt}
-                  className="h-7 w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+                src={m.src}
+                alt={m.alt}
+                className="h-10 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </div>
           {/* Bottom row — Bancolombia y Nequi */}
-          <div className="flex flex-wrap justify-center items-center gap-3">
+          <div className="flex flex-wrap justify-center items-center gap-4">
             {paymentLocal.map((m) => (
-              <div
+              <img
                 key={m.alt}
-                className="bg-white h-11 px-4 flex items-center justify-center"
-              >
-                <img
-                  src={m.src}
-                  alt={m.alt}
-                  className="h-6 w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+                src={m.src}
+                alt={m.alt}
+                className="h-8 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </div>
         </div>
