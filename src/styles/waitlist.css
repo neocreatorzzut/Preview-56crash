@@ -74,34 +74,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ── NAV ── */
-.wl-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2.5rem;
-  border-bottom: 1px solid var(--wl-mid);
-  position: sticky;
-  top: 0;
-  background: rgba(10, 10, 10, 0.93);
-  backdrop-filter: blur(12px);
-  z-index: 100;
-}
-.wl-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.12em;
-  color: var(--wl-blue);
-}
-.wl-nav-tag {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--wl-muted);
-  border: 1px solid var(--wl-mid);
-  padding: 0.3rem 0.8rem;
-}
-
 /* ── TICKER ── */
 .wl-ticker-wrap {
   overflow: hidden;
