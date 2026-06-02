@@ -1,8 +1,16 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from "@/components/Navbar";
 import ParticleRunner from "@/components/ParticleRunner";
+
+// ── CARRUSEL DEL HERO ───────────────────────────────────────────────────────
+const CAROUSEL_IMAGES = [
+  { src: '/assets/wl-carousel-1.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-2.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-3.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-4.webp', alt: 'Crash Training' },
+];
 
 // ── CONFIGURACIÓN DEL FORMULARIO ───────────────────────────────────────────────
 // Para registrar correos reales, elige una opción:
@@ -105,6 +113,15 @@ export default function WaitlistCrashApp() {
   const [gridError, setGridError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    if (CAROUSEL_IMAGES.length < 2) return;
+    const id = setInterval(() => {
+      setSlide(s => (s + 1) % CAROUSEL_IMAGES.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -188,7 +205,19 @@ export default function WaitlistCrashApp() {
         </div>
         <div className="wl-hero-visual">
           <div className="wl-scatter" />
-          <ParticleRunner />
+          <div className="wl-carousel">
+            {CAROUSEL_IMAGES.map((img, i) => (
+              <img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                className="wl-carousel-img"
+                style={{ opacity: i === slide ? 1 : 0 }}
+                loading={i === 0 ? undefined : 'lazy'}
+                decoding="async"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -315,6 +344,12 @@ export default function WaitlistCrashApp() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Particle Runner — cierre antes del footer */}
+      <section className="wl-runner-section" aria-hidden="true">
+        <div className="wl-scatter" />
+        <ParticleRunner />
       </section>
 
       {/* Footer */}
