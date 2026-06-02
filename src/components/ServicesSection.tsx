@@ -59,7 +59,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-card border border-border/50 hover:border-primary/50 transition-all duration-500"
+              className="group relative overflow-hidden bg-card/40 border border-border/30 hover:border-primary/50 transition-all duration-500"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
@@ -74,7 +74,7 @@ const ServicesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="relative p-6 -mt-12 bg-card">
+              <div className="relative p-6 -mt-12 bg-card/40">
                 <div className="w-14 h-14 bg-primary flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-500">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
