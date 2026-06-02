@@ -1,89 +1,131 @@
 import Link from "next/link";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 
-const Footer = () => {
-  const quickLinks = [
+const socials = [
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Youtube, href: "#", label: "YouTube" },
+];
+
+const columns: Record<string, { label: string; href: string }[]> = {
+  "El Gym": [
     { label: "Inicio", href: "/" },
     { label: "Servicios", href: "/#servicios" },
     { label: "Planes", href: "/#planes" },
+    { label: "Equipamiento", href: "/#equipamiento" },
+  ],
+  "Equipo": [
     { label: "Coaches", href: "/equipo" },
+    { label: "Horarios", href: "/horarios" },
+    { label: "Sucursales", href: "/sucursales" },
     { label: "Contacto", href: "/#contacto" },
-  ];
+  ],
+  "Legal": [
+    { label: "Política de Privacidad", href: "#" },
+    { label: "Términos y Condiciones", href: "#" },
+    { label: "Política de Cookies", href: "#" },
+    { label: "HABEAS DATA", href: "#" },
+  ],
+};
 
-  const socials = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" },
-  ];
-
+const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border/50 pt-16 pb-8">
+    <footer style={{ background: "#0a0a0a", borderTop: "1px solid #1a1a1a" }} className="pt-14">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 mb-12">
+
+        {/* Top grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+
           {/* Brand */}
-          <div>
-            <a href="#" className="inline-block mb-6">
-              <img src="/assets/logo.webp" alt="Crash Training" className="h-12 w-auto" loading="lazy"
-          decoding="async"
-        />
+          <div className="col-span-2 md:col-span-1">
+            <a href="/" className="inline-block mb-5">
+              <img
+                src="/assets/logo.webp"
+                alt="Crash Training"
+                className="h-12 w-auto"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Transformando vidas desde 2014. El gimnasio del futuro está aquí. 
+            <p style={{ color: "#555", fontSize: "0.65rem", lineHeight: 1.8, letterSpacing: "0.04em", maxWidth: 220 }} className="mb-6">
+              Transformando vidas desde 2014. El gimnasio del futuro está aquí.
               Únete a nuestra comunidad de más de 500 atletas.
             </p>
-            <div className="flex gap-3">
-              {socials.map((social, index) => (
+            <div className="flex gap-2">
+              {socials.map((s, i) => (
                 <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 bg-primary/10 flex items-center justify-center hover:bg-primary/20 hover:scale-110 transition-all"
+                  key={i}
+                  href={s.href}
+                  aria-label={s.label}
+                  style={{ border: "1px solid #2a2a2a", color: "#555", width: 36, height: 36 }}
+                  className="flex items-center justify-center hover:border-white hover:text-white transition-all duration-200"
                 >
-                  <social.icon className="w-5 h-5 text-primary" />
+                  <s.icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-display font-bold text-lg mb-6 tracking-wide">Enlaces Rápidos</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  {link.href.startsWith("/") && !link.href.startsWith("/#") ? (
+          {/* Link columns */}
+          {Object.entries(columns).map(([title, items]) => (
+            <div key={title}>
+              <span
+                className="font-display uppercase block mb-5"
+                style={{ fontSize: "0.82rem", letterSpacing: "0.22em", color: "#f0f0f0" }}
+              >
+                {title}
+              </span>
+              <ul className="flex flex-col" style={{ gap: "0.6rem" }}>
+                {items.map((item) => (
+                  <li key={item.label}>
                     <Link
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                      href={item.href}
+                      className="group flex items-center transition-colors duration-200"
+                      style={{ color: "#555", fontSize: "0.65rem", letterSpacing: "0.08em", gap: "0.4rem" }}
                     >
-                      {link.label}
+                      <span
+                        className="group-hover:text-white transition-colors duration-200"
+                        style={{ color: "#2a2a2a", fontSize: "0.5rem" }}
+                      >
+                        ▸
+                      </span>
+                      <span className="group-hover:text-white transition-colors duration-200">{item.label}</span>
                     </Link>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {link.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom bar */}
+        <div
+          style={{ borderTop: "1px solid #1a1a1a" }}
+          className="py-5 flex justify-between items-center flex-wrap gap-3"
+        >
+          <span style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase" }}>
+            © 2026 Crash Training — Todos los derechos reservados
+          </span>
+          <div className="flex items-center gap-3">
+            <span style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "0.1em" }}>
+              Hecho por Klauscorp Dynamics ®
+            </span>
+            <span
+              style={{
+                color: "#555",
+                fontSize: "0.58rem",
+                border: "1px solid #2a2a2a",
+                padding: "0.2rem 0.7rem",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+              }}
+            >
+              Antioquia · Colombia
+            </span>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Crash Training. Todos los derechos reservados.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Hecho por Klauscorp Dynamics ®
-            </p>
-          </div>
-        </div>
       </div>
     </footer>
   );
