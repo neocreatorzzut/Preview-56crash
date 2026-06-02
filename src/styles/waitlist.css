@@ -46,7 +46,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 0.65rem 1.5rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.22em;
   display: flex;
@@ -89,7 +89,7 @@ body {
   white-space: nowrap;
 }
 .wl-ticker-item {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   color: var(--wl-muted);
@@ -130,7 +130,7 @@ body {
 }
 
 .wl-h1 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: clamp(3.5rem, 10vw, 8rem);
   line-height: 0.92;
   letter-spacing: 0.02em;
@@ -235,7 +235,7 @@ body {
   position: absolute;
   right: -0.5rem; top: 50%;
   transform: translateY(-50%) rotate(90deg);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 5rem;
   color: var(--wl-red);
   opacity: 0.07;
@@ -252,7 +252,7 @@ body {
   gap: 0.4rem;
 }
 .wl-offer-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   line-height: 1;
   color: var(--wl-white);
@@ -269,14 +269,14 @@ body {
   margin-bottom: 0.2rem;
 }
 .wl-price-new {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: clamp(2.5rem, 6vw, 3.8rem);
   color: var(--wl-red);
   line-height: 1;
   display: block;
 }
 .wl-price-usd {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 1.2rem;
   color: var(--wl-white);
   opacity: 0.6;
@@ -309,7 +309,7 @@ body {
 .wl-stat { flex: 1; padding: 1.5rem 2rem; border-right: 1px solid var(--wl-mid); }
 .wl-stat:last-child { border-right: none; }
 .wl-stat-num {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 2.8rem;
   color: var(--wl-blue);
   line-height: 1;
@@ -355,7 +355,7 @@ body {
   content: attr(data-num);
   position: absolute;
   top: 1rem; right: 1.2rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 3.5rem;
   color: var(--wl-mid);
   line-height: 1;
@@ -391,7 +391,7 @@ body {
 }
 .wl-form-header { margin-bottom: 2.5rem; }
 .wl-form-h2 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 0.95;
   margin-bottom: 0.8rem;
@@ -439,7 +439,7 @@ body {
   background: var(--wl-blue);
   color: #fff;
   border: none;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 1.4rem;
   letter-spacing: 0.15em;
   padding: 1.2rem 2rem;
@@ -477,7 +477,7 @@ body {
 }
 .wl-success-icon { margin-bottom: 1.5rem; color: var(--wl-blue); }
 .wl-success-h3 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: var(--wl-white);
@@ -501,7 +501,7 @@ body {
 .wl-footer-brand .wl-logo { font-size: 1.6rem; display: block; margin-bottom: 0.8rem; }
 .wl-footer-brand p { font-size: 0.65rem; color: var(--wl-muted); line-height: 1.7; max-width: 220px; }
 .wl-footer-col-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.2em;
   color: var(--wl-white);
