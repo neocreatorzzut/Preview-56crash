@@ -142,41 +142,43 @@ const TestimonialsSection = () => {
             </h3>
           </div>
 
-          <div className="relative">
-            <button
-              onClick={() => scrollPhotos("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+          <div className="bg-primary/10 border-2 border-primary glow-primary p-4 md:p-6">
+            <div className="relative">
+              <button
+                onClick={() => scrollPhotos("left")}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
 
-            <div
-              ref={scrollRef}
-              className="flex gap-4 overflow-x-auto scrollbar-hide px-8 snap-x snap-mandatory"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              {communityPhotos.map((photo, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden border border-border/50 snap-center"
-                >
-                  <img
-                    src={photo}
-                    alt={`Comunidad Crash Training ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-          decoding="async"
-        />
-                </div>
-              ))}
+              <div
+                ref={scrollRef}
+                className="flex gap-4 overflow-x-auto scrollbar-hide px-8 snap-x snap-mandatory"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {communityPhotos.map((photo, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden border border-border/50 snap-center"
+                  >
+                    <img
+                      src={photo}
+                      alt={`Comunidad Crash Training ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <button
+                onClick={() => scrollPhotos("right")}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
             </div>
-
-            <button
-              onClick={() => scrollPhotos("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
           </div>
         </div>
 
