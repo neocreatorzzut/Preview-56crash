@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowLeft, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -34,13 +33,13 @@ const Horarios = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <Link
-            to="/"
+          <a
+            href="/"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Volver al inicio
-          </Link>
+          </a>
 
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-4">

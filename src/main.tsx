@@ -1,5 +1,8 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
+import { PageShell } from "./PageShell";
+import Index from "./pages/Index";
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <PageShell><Index /></PageShell>
+);
