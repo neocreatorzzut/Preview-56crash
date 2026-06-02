@@ -1,5 +1,6 @@
+"use client";
+
 import { useState } from 'react';
-import '../styles/waitlist.css';
 
 // ── CONFIGURACIÓN DEL FORMULARIO ───────────────────────────────────────────────
 // Para registrar correos reales, elige una opción:

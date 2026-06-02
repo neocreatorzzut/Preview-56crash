@@ -1,7 +1,8 @@
 import { Instagram, Twitter } from "lucide-react";
-import coach1 from "@/assets/coach-1.jpg";
-import coach2 from "@/assets/coach-2.jpg";
-import coach3 from "@/assets/coach-3.jpg";
+
+const coach1 = "/assets/coach-1.jpg";
+const coach2 = "/assets/coach-2.jpg";
+const coach3 = "/assets/coach-3.jpg";
 
 const coaches = [
   {

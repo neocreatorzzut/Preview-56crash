@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Quote, Users, MapPin, Award, Clock } from "lucide-react";
 
-import community1 from "@/assets/community-1.jpg";
-import community2 from "@/assets/community-2.jpg";
-import community3 from "@/assets/community-3.jpg";
-import community4 from "@/assets/community-4.jpg";
-import community5 from "@/assets/community-5.jpg";
-import community6 from "@/assets/community-6.jpg";
+const community1 = "/assets/community-1.jpg";
+const community2 = "/assets/community-2.jpg";
+const community3 = "/assets/community-3.jpg";
+const community4 = "/assets/community-4.jpg";
+const community5 = "/assets/community-5.jpg";
+const community6 = "/assets/community-6.jpg";
 
 const testimonials = [
   {

@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import teamGroup from "@/assets/team-group.jpg";
+
+const teamGroup = "/assets/team-group.jpg";
 
 const CoachesPreSection = () => {
   return (
@@ -45,12 +47,12 @@ const CoachesPreSection = () => {
 
             {/* Overlay CTA */}
             <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-              <a href="/equipo">
+              <Link href="/equipo">
                 <Button variant="glow" size="xl" className="group/btn">
                   CONOCE AL EQUIPO
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
