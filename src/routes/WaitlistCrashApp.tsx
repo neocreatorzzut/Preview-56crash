@@ -148,7 +148,7 @@ export default function WaitlistCrashApp() {
       {/* Promo Banner */}
       <div className="wl-promo-banner">
         <span className="wl-promo-badge">SOLO WAITLIST</span>
-        3 MESES DE ACCESO COMPLETO POR $10 USD — OFERTA EXCLUSIVA
+        OFERTA EXCLUSIVA
         <span className="wl-promo-badge">TIEMPO LIMITADO</span>
       </div>
 
