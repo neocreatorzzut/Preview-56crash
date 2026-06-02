@@ -148,6 +148,7 @@ export default function WaitlistCrashApp() {
       {/* Promo Banner */}
       <div className="wl-promo-banner">
         <span className="wl-promo-badge">SOLO WAITLIST</span>
+        OFERTA EXCLUSIVA
         <span className="wl-promo-badge">TIEMPO LIMITADO</span>
       </div>
 
