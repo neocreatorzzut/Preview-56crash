@@ -48,7 +48,7 @@ const HeroSection = () => {
             <span className="text-gradient-primary">ELEVA TU VIDA</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed">
+          <p className="text-sm md:text-base text-muted-foreground max-w-xl mb-8 leading-relaxed">
             Descubre un espacio donde el Kickboxing y el fitness se fusionan para llevarte más allá de tus límites. Entrenamiento de élite, coaches certificados y equipamiento de última generación.
           </p>
 

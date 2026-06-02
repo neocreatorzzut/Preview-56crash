@@ -49,7 +49,7 @@ const ServicesSection = () => {
             </span>
             <div className="w-12 h-px bg-primary" />
           </div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
             NUESTROS <span className="text-gradient-primary">SERVICIOS</span>
           </h2>
         </div>
