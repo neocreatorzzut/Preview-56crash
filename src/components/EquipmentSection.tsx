@@ -25,7 +25,7 @@ const EquipmentSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg mt-4 max-w-2xl leading-relaxed">
             Contamos con las mejores marcas del mercado para garantizar tu seguridad
-            y maximizar tus resultados. Cada máquina está diseñada para llevarte al siguiente nivel.
+            y maximizar tus resultados. Cada una de nuestras estaciones está diseñada para tu desarrollo físico.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ const EquipmentSection = () => {
               />
               <BenefitItem
                 title="Área de peso libre profesional"
-                description="Cada máquina está diseñada para llevarte al siguiente nivel."
+                description="Cada una de nuestras estaciones está diseñada para tu desarrollo físico."
                 className="mt-6"
               />
             </div>
@@ -74,8 +74,8 @@ const EquipmentSection = () => {
             {/* Text Block */}
             <div className="bg-card  p-8 flex flex-col justify-center border border-border">
               <BenefitItem
-                title="Equipamiento cardiovascular premium"
-                description="Equipamiento cardiovascular premium para tu entrenamiento."
+                title="Mecanismos Cardiovasculares"
+                description="Planeaciones de entrenamiento premium con mecanismos cardiovasculares."
               />
               <BenefitItem
                 title="Zona de estiramiento y recuperación"
@@ -90,8 +90,8 @@ const EquipmentSection = () => {
             {/* Text Block */}
             <div className="bg-card  p-8 flex flex-col justify-center border border-border">
               <BenefitItem
-                title="Tecnología de tracking integrada"
-                description="Monitorea tu progreso con tecnología de seguimiento avanzada."
+                title="Tracking Personalizado"
+                description="Supervisión de progreso personal con profesionales."
               />
               <BenefitItem
                 title="Mantenimiento constante"
