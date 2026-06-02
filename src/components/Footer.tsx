@@ -109,7 +109,7 @@ const Footer = () => {
           </span>
           <div className="flex items-center gap-3">
             <span style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "0.1em" }}>
-              Hecho por Klauscorp Dynamics ®
+              Hecho por Prodigium Dynamics ®
             </span>
             <span
               style={{
