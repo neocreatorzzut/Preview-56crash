@@ -1,8 +1,8 @@
 import { Instagram, Twitter } from "lucide-react";
 
-const coach1 = "/assets/coach-1.jpg";
-const coach2 = "/assets/coach-2.jpg";
-const coach3 = "/assets/coach-3.jpg";
+const coach1 = "/assets/coach-1.webp";
+const coach2 = "/assets/coach-2.webp";
+const coach3 = "/assets/coach-3.webp";
 
 const coaches = [
   {
@@ -60,7 +60,9 @@ const CoachesSection = () => {
                   src={coach.image}
                   alt={coach.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                loading="lazy"
+          decoding="async"
+        />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                 
                 {/* Social Icons - Show on hover */}

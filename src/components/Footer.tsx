@@ -24,7 +24,9 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a href="#" className="inline-block mb-6">
-              <img src="/assets/logo.jpg" alt="Crash Training" className="h-12 w-auto" />
+              <img src="/assets/logo.webp" alt="Crash Training" className="h-12 w-auto" loading="lazy"
+          decoding="async"
+        />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Transformando vidas desde 2014. El gimnasio del futuro está aquí. 

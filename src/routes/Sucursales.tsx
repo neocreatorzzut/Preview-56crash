@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const gymInterior1 = "/assets/gym-interior-1.jpg";
-const gymInterior2 = "/assets/gym-interior-2.jpg";
-const gymInterior3 = "/assets/gym-interior-3.jpg";
+const gymInterior1 = "/assets/gym-interior-1.webp";
+const gymInterior2 = "/assets/gym-interior-2.webp";
+const gymInterior3 = "/assets/gym-interior-3.webp";
 
 const branches = [
   {
@@ -96,7 +96,9 @@ const Sucursales = () => {
                       src={branch.image}
                       alt={branch.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    loading="lazy"
+          decoding="async"
+        />
                     <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
                     {branch.flagship && (
                       <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary/20 border border-primary/30 text-xs font-semibold text-primary uppercase tracking-wider backdrop-blur-sm">

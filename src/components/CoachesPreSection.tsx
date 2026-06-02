@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const teamGroup = "/assets/team-group.jpg";
+const teamGroup = "/assets/team-group.webp";
 
 const CoachesPreSection = () => {
   return (
@@ -42,7 +42,9 @@ const CoachesPreSection = () => {
               src={teamGroup}
               alt="Equipo Crash Training"
               className="w-full h-[350px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
-            />
+            loading="lazy"
+          decoding="async"
+        />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
 
             {/* Overlay CTA */}

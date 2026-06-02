@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Check, Building2 } from "lucide-react";
 
-const gymEquipment = "/assets/gym-equipment.jpg";
-const gymInterior2 = "/assets/gym-interior-2.jpg";
-const gymInterior3 = "/assets/gym-interior-3.jpg";
+const gymEquipment = "/assets/gym-equipment.webp";
+const gymInterior2 = "/assets/gym-interior-2.webp";
+const gymInterior3 = "/assets/gym-interior-3.webp";
 
 
 
@@ -51,7 +51,9 @@ const EquipmentSection = () => {
                 src={gymEquipment}
                 alt="Interior del gimnasio"
                 className="w-full h-full object-cover absolute inset-0"
-              />
+              loading="lazy"
+          decoding="async"
+        />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </div>
@@ -64,7 +66,9 @@ const EquipmentSection = () => {
                 src={gymInterior2}
                 alt="Recepción del gimnasio"
                 className="w-full h-full object-cover absolute inset-0"
-              />
+              loading="lazy"
+          decoding="async"
+        />
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             </div>
             {/* Text Block */}
@@ -101,7 +105,9 @@ const EquipmentSection = () => {
                 src={gymInterior3}
                 alt="Área de entrenamiento"
                 className="w-full h-full object-cover absolute inset-0"
-              />
+              loading="lazy"
+          decoding="async"
+        />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </div>

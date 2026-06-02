@@ -5,11 +5,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const coach1 = "/assets/coach-1.jpg";
-const coach2 = "/assets/coach-2.jpg";
-const coach3 = "/assets/coach-3.jpg";
-const coach4 = "/assets/coach-4.png";
-const coach5 = "/assets/coach-5.png";
+const coach1 = "/assets/coach-1.webp";
+const coach2 = "/assets/coach-2.webp";
+const coach3 = "/assets/coach-3.webp";
+const coach4 = "/assets/coach-4.webp";
+const coach5 = "/assets/coach-5.webp";
 
 const coaches = [
   {
@@ -96,7 +96,9 @@ const Equipo = () => {
                     src={coach.image}
                     alt={coach.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                  loading="lazy"
+          decoding="async"
+        />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
 
                   {/* Social Icons */}
