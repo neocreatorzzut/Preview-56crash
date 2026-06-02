@@ -32,7 +32,9 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <BackgroundAnimation />
-        <Providers>{children}</Providers>
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );
