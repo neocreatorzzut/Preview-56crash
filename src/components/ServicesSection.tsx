@@ -1,5 +1,4 @@
 import { Dumbbell, Music, Flame, Swords, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
 import personalTraining from "@/assets/personal-training-new.png";
 import danceClass from "@/assets/dance-class.jpg";
 import conditioning from "@/assets/conditioning.jpg";
@@ -93,13 +92,13 @@ const ServicesSection = () => {
 
         {/* Schedule Button */}
         <div className="flex justify-center mt-12">
-          <Link
-            to="/horarios"
+          <a
+            href="/horarios"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
           >
             <Calendar className="w-5 h-5" />
             VER HORARIOS DE CLASES
-          </Link>
+          </a>
         </div>
       </div>
     </section>

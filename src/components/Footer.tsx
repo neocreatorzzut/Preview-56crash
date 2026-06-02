@@ -1,14 +1,13 @@
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
-import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   const quickLinks = [
-    { label: "Inicio", href: "#", type: "anchor" },
-    { label: "Servicios", href: "#servicios", type: "anchor" },
-    { label: "Planes", href: "#planes", type: "anchor" },
-    { label: "Coaches", href: "/equipo", type: "route" },
-    { label: "Contacto", href: "#contacto", type: "anchor" },
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/#servicios" },
+    { label: "Planes", href: "/#planes" },
+    { label: "Coaches", href: "/equipo" },
+    { label: "Contacto", href: "/#contacto" },
   ];
 
   const socials = [
@@ -51,21 +50,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  {link.type === "route" ? (
-                    <Link
-                      to={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {link.label}
-                    </a>
-                  )}
+                  <a
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
