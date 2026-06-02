@@ -2,7 +2,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #0a0a0a;
 }
 *,
 *::before,
@@ -22,7 +21,7 @@ body {
   --wl-mid: #2a2a2a;
   --wl-muted: #555;
 
-  background: var(--wl-black);
+  background: transparent;
   color: var(--wl-white);
   font-family: 'DM Mono', monospace;
   min-height: 100vh;

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const PARTICLE_COUNT = 130;
+const PARTICLE_COUNT = 220;
 // Brand primary: #173DED = rgb(23, 61, 237)
 const RGB = "23, 61, 237";
 
@@ -33,7 +33,7 @@ export default function BackgroundAnimation() {
       y: Math.random() * canvas.height,
       speed: rand(1.0, 2.4),
       size: rand(0.5, 1.8),
-      opacity: rand(0.3, 0.75),
+      opacity: rand(0.12, 0.38),
     }));
 
     // Flow field: combined sine/cosine field that evolves over time
