@@ -2,19 +2,31 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Crash Training</title>
-    <script>
-      // GitHub Pages SPA redirect: encode the current path and redirect to root
-      // so React Router can handle the route client-side.
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1).join('/') + '/?/' +
-        l.pathname.slice(1).replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página no encontrada — Crash Training</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #0a0a0a;
+        color: #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+        gap: 1rem;
+      }
+      h1 { font-size: 2rem; margin: 0; }
+      p { color: #888; margin: 0; }
+      a { color: #e11d48; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>404 — Página no encontrada</h1>
+    <p>La página que buscas no existe.</p>
+    <a href="/">Volver al inicio</a>
+  </body>
 </html>
