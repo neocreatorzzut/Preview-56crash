@@ -34,7 +34,7 @@ const EquipmentSection = () => {
           {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-card  p-8 flex flex-col justify-center border border-border">
+            <div className="bg-black/20 p-8 flex flex-col justify-center border border-border">
               <BenefitItem
                 title="Equipo de última generación"
                 description="Para garantizar tu seguridad y maximizar tus resultados."
@@ -72,7 +72,7 @@ const EquipmentSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             </div>
             {/* Text Block */}
-            <div className="bg-card  p-8 flex flex-col justify-center border border-border">
+            <div className="bg-black/20 p-8 flex flex-col justify-center border border-border">
               <BenefitItem
                 title="Mecanismos Cardiovasculares"
                 description="Planeaciones de entrenamiento premium con mecanismos cardiovasculares."
@@ -88,7 +88,7 @@ const EquipmentSection = () => {
           {/* Row 3 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-card  p-8 flex flex-col justify-center border border-border">
+            <div className="bg-black/20 p-8 flex flex-col justify-center border border-border">
               <BenefitItem
                 title="Tracking Personalizado"
                 description="Supervisión de progreso personal con profesionales."
