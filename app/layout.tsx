@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 
 export const metadata: Metadata = {
   title: "Crash Training",
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <BackgroundAnimation />
         <Providers>{children}</Providers>
       </body>
     </html>

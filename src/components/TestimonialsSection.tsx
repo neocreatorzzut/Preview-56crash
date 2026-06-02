@@ -137,7 +137,7 @@ const TestimonialsSection = () => {
         {/* Community Photos */}
         <div className="mb-20">
           <div className="text-center mb-8">
-            <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight">
+            <h3 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
               NUESTRA <span className="text-gradient-primary">COMUNIDAD</span>
             </h3>
           </div>
