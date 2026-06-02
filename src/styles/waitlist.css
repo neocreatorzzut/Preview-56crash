@@ -321,6 +321,7 @@ body {
   margin-top: 0.2rem;
 }
 @media (max-width: 600px) {
+  .wl-offer-block { padding: 0 1.5rem; }
   .wl-offer-inner { flex-direction: column; padding: 1.5rem; }
   .wl-offer-price { text-align: left; }
 }
@@ -442,7 +443,7 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--wl-muted);
-  padding: 1rem 1.5rem 0.3rem;
+  padding: 0.55rem 1.5rem 0.2rem;
   transition: color 0.2s;
 }
 .wl-field:focus-within label { color: var(--wl-blue); }
@@ -453,7 +454,7 @@ body {
   font-family: 'DM Mono', monospace;
   font-size: 0.95rem;
   color: var(--wl-white);
-  padding: 0.3rem 1.5rem 1rem;
+  padding: 0.2rem 1.5rem 0.55rem;
   width: 100%;
   transition: color 0.2s;
 }
