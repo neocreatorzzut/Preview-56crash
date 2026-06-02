@@ -171,6 +171,33 @@ body {
 }
 .wl-runner-svg circle { fill: var(--wl-blue); }
 
+/* ── CARRUSEL DEL HERO ── */
+.wl-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.wl-carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1.2s ease;
+  filter: drop-shadow(0 0 22px rgba(0, 102, 255, 0.25));
+}
+
+/* ── SECCIÓN RUNNER (cierre antes del footer) ── */
+.wl-runner-section {
+  position: relative;
+  width: min(340px, 70vw);
+  aspect-ratio: 1 / 1;
+  margin: 1rem auto 3.5rem;
+}
+.wl-runner-section .wl-runner-svg {
+  z-index: 1;
+}
+
 .wl-scatter {
   position: absolute;
   inset: -5%;

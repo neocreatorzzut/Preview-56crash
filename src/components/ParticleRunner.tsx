@@ -35,8 +35,8 @@ const SH_L = "5,0,0; 18,0,0; 78,0,0; 25,0,0; 5,0,0";     // pantorrilla izquierd
 const SH_R = "78,0,0; 25,0,0; 5,0,0; 18,0,0; 78,0,0";    // pantorrilla derecha
 const UA_L = "38,0,0; -38,0,0; 38,0,0";                   // brazo izquierdo
 const UA_R = "-38,0,0; 38,0,0; -38,0,0";                  // brazo derecho
-const FA_L = "82,0,0; 55,0,0; 82,0,0";                    // antebrazo izquierdo
-const FA_R = "55,0,0; 82,0,0; 55,0,0";                    // antebrazo derecho
+const FA_L = "-82,0,0; -55,0,0; -82,0,0";                 // antebrazo izquierdo (codo pliega adelante)
+const FA_R = "-55,0,0; -82,0,0; -55,0,0";                 // antebrazo derecho (codo pliega adelante)
 const BOB  = "0,0; 0,-7; 0,0; 0,-7; 0,0";                 // rebote vertical del cuerpo
 
 const DUR = "0.72s";
