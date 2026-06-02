@@ -31,7 +31,7 @@ const columns: Record<string, { label: string; href: string }[]> = {
 
 const Footer = () => {
   return (
-    <footer style={{ background: "#0a0a0a", borderTop: "1px solid #1a1a1a" }} className="pt-14">
+    <footer style={{ background: "transparent", borderTop: "1px solid #1a1a1a" }} className="pt-14">
       <div className="container mx-auto px-4">
 
         {/* Top grid */}
@@ -102,28 +102,26 @@ const Footer = () => {
         {/* Bottom bar */}
         <div
           style={{ borderTop: "1px solid #1a1a1a" }}
-          className="py-5 flex justify-between items-center flex-wrap gap-3"
+          className="py-5 flex flex-col items-center gap-2"
         >
           <span style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase" }}>
             © 2026 Crash Training — Todos los derechos reservados
           </span>
-          <div className="flex items-center gap-3">
-            <span style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "0.1em" }}>
-              Hecho por Prodigium Dynamics ®
-            </span>
-            <span
-              style={{
-                color: "#555",
-                fontSize: "0.58rem",
-                border: "1px solid #2a2a2a",
-                padding: "0.2rem 0.7rem",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-              }}
-            >
-              Antioquia · Colombia
-            </span>
-          </div>
+          <span
+            style={{
+              color: "#555",
+              fontSize: "0.58rem",
+              border: "1px solid #2a2a2a",
+              padding: "0.2rem 0.7rem",
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+            }}
+          >
+            Antioquia · Colombia
+          </span>
+          <span style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "0.1em" }}>
+            Hecho por Prodigium Dynamics ®
+          </span>
         </div>
 
       </div>

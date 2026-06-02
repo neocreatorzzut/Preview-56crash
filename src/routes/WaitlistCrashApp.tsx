@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Navbar from "@/components/Navbar";
+import ParticleRunner from "@/components/ParticleRunner";
 
 // ── CONFIGURACIÓN DEL FORMULARIO ───────────────────────────────────────────────
 // Para registrar correos reales, elige una opción:
@@ -186,9 +187,8 @@ export default function WaitlistCrashApp() {
           </p>
         </div>
         <div className="wl-hero-visual">
-          <div className="wl-particle-field">
-            <div className="wl-scatter" />
-          </div>
+          <div className="wl-scatter" />
+          <ParticleRunner />
         </div>
       </section>
 
