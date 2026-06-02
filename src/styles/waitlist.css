@@ -155,9 +155,10 @@ body {
 /* ── HERO VISUAL ── */
 .wl-hero-visual {
   flex-shrink: 0;
-  width: min(340px, 40vw);
-  aspect-ratio: 1 / 1;
+  width: min(300px, 38vw);
+  aspect-ratio: 4 / 5;
   position: relative;
+  overflow: hidden;
   animation: wl-fadeUp 0.6s 0.3s ease both;
 }
 /* ── PARTICLE RUNNER (figura de partículas con ciclo de carrera) ── */
@@ -184,7 +185,15 @@ body {
   height: 100%;
   object-fit: cover;
   transition: opacity 1.2s ease;
-  filter: drop-shadow(0 0 22px rgba(0, 102, 255, 0.25));
+}
+/* thin blue outline so edges read cleanly on dark bg */
+.wl-hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(0, 102, 255, 0.25);
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* ── SECCIÓN RUNNER (cierre antes del footer) ── */
@@ -209,7 +218,7 @@ body {
 
 @media (max-width: 750px) {
   .wl-hero { flex-direction: column; gap: 2rem; padding: 3rem 1.5rem 2rem; }
-  .wl-hero-visual { width: min(280px, 85vw); }
+  .wl-hero-visual { width: min(260px, 80vw); }
 }
 
 /* ── OFFER BLOCK ── */

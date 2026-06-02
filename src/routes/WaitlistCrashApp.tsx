@@ -5,12 +5,11 @@ import Navbar from "@/components/Navbar";
 import ParticleRunner from "@/components/ParticleRunner";
 
 // ── CARRUSEL DEL HERO ───────────────────────────────────────────────────────
-// Placeholder con fotos existentes — se reemplazan por las imágenes finales
-// que enviará el cliente. Auto-rota con crossfade suave.
 const CAROUSEL_IMAGES = [
-  { src: '/assets/gym-interior-1.webp', alt: 'Crash Training' },
-  { src: '/assets/gym-interior-2.webp', alt: 'Crash Training' },
-  { src: '/assets/community-1.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-1.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-2.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-3.webp', alt: 'Crash Training' },
+  { src: '/assets/wl-carousel-4.webp', alt: 'Crash Training' },
 ];
 
 // ── CONFIGURACIÓN DEL FORMULARIO ───────────────────────────────────────────────

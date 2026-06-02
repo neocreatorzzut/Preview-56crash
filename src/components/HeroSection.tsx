@@ -28,8 +28,8 @@ const HeroSection = () => {
             key={img.src}
             src={img.src}
             alt={img.alt}
-            className="absolute inset-0 w-full h-full object-cover opacity-60 transition-opacity duration-[1500ms]"
-            style={{ opacity: i === activeIndex ? 0.6 : 0 }}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: i === activeIndex ? 0.6 : 0, transition: 'opacity 2s ease' }}
             fetchPriority={i === 0 ? "high" : undefined}
             decoding="async"
           />
