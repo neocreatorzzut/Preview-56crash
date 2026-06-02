@@ -15,7 +15,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen text-foreground overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <MarqueeBanner />

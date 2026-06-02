@@ -50,7 +50,7 @@ const branches = [
 
 const Sucursales = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen text-foreground overflow-x-hidden">
       <Navbar />
 
       <section className="pt-28 pb-16 relative">
