@@ -74,9 +74,9 @@ const ServicesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="relative p-6 -mt-12">
-                <div className="w-14 h-14 bg-primary/20 border border-primary/30 flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-500">
-                  <service.icon className="w-7 h-7 text-primary" />
+              <div className="relative p-6 -mt-12 bg-card">
+                <div className="w-14 h-14 bg-primary flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-500">
+                  <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-display text-xl font-bold mb-3 tracking-wide">
                   {service.title}

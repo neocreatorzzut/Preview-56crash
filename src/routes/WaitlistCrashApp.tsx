@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Navbar from "@/components/Navbar";
 
 // ── CONFIGURACIÓN DEL FORMULARIO ───────────────────────────────────────────────
 // Para registrar correos reales, elige una opción:
@@ -145,18 +146,17 @@ export default function WaitlistCrashApp() {
     <div className="wl-page">
       <div className="wl-noise" aria-hidden="true" />
 
+      <Navbar />
+
+      {/* Spacer for fixed navbar */}
+      <div style={{ height: "80px" }} />
+
       {/* Promo Banner */}
       <div className="wl-promo-banner">
         <span className="wl-promo-badge">SOLO WAITLIST</span>
         OFERTA EXCLUSIVA
         <span className="wl-promo-badge">TIEMPO LIMITADO</span>
       </div>
-
-      {/* Nav */}
-      <nav className="wl-nav">
-        <div className="wl-logo">CRASH//</div>
-        <div className="wl-nav-tag">Acceso Anticipado</div>
-      </nav>
 
       {/* Ticker */}
       <div className="wl-ticker-wrap">

@@ -87,7 +87,7 @@ const TestimonialsSection = () => {
 
           {/* Carousel */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl bg-card border border-border/50 p-8 md:p-12">
+            <div className="overflow-hidden bg-card border border-border/50 p-8 md:p-12">
               <Quote className="w-12 h-12 text-primary/30 mb-6" />
               
               <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8">
@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
               </p>
               
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary">
+                <div className="w-14 h-14 bg-primary/20 flex items-center justify-center font-display font-bold text-primary">
                   {testimonials[currentIndex].image}
                 </div>
                 <div>
@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
             <div className="flex justify-center gap-4 mt-6">
               <button
                 onClick={prevSlide}
-                className="w-12 h-12 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+                className="w-12 h-12 border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -118,7 +118,7 @@ const TestimonialsSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
+                    className={`w-2 h-2 transition-all ${
                       index === currentIndex ? "bg-primary w-6" : "bg-border"
                     }`}
                   />
@@ -126,7 +126,7 @@ const TestimonialsSection = () => {
               </div>
               <button
                 onClick={nextSlide}
-                className="w-12 h-12 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+                className="w-12 h-12 border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -145,7 +145,7 @@ const TestimonialsSection = () => {
           <div className="relative">
             <button
               onClick={() => scrollPhotos("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -158,7 +158,7 @@ const TestimonialsSection = () => {
               {communityPhotos.map((photo, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 rounded-xl overflow-hidden border border-border/50 snap-center"
+                  className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden border border-border/50 snap-center"
                 >
                   <img
                     src={photo}
@@ -173,7 +173,7 @@ const TestimonialsSection = () => {
 
             <button
               onClick={() => scrollPhotos("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -185,9 +185,9 @@ const TestimonialsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all group"
+              className="text-center p-6 bg-card border border-border/50 hover:border-primary/30 transition-all group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <stat.icon className="w-7 h-7 text-primary" />
               </div>
               <p className="font-display text-4xl font-bold text-primary mb-2">{stat.value}</p>
