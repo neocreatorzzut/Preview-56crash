@@ -15,12 +15,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks: { href: string; label: string; target?: string }[] = [
     { href: "/#servicios", label: "Servicios" },
     { href: "/#equipamiento", label: "Equipamiento" },
-    { href: "/#coaches", label: "Coaches" },
     { href: "/#planes", label: "Planes" },
-    { href: "/#contacto", label: "Contacto" },
+    { href: "https://wa.me/573128077046", label: "Contacto", target: "_blank" },
   ];
 
   const pageLinks = [
@@ -50,6 +49,8 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
+              target={link.target}
+              rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
             >
               {link.label}

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 
 const socials = [
@@ -19,7 +18,7 @@ const columns: Record<string, { label: string; href: string }[]> = {
     { label: "Coaches", href: "/equipo" },
     { label: "Horarios", href: "/horarios" },
     { label: "Sucursales", href: "/sucursales" },
-    { label: "Contacto", href: "/#contacto" },
+    { label: "Contacto", href: "https://wa.me/573128077046" },
   ],
   "Legal": [
     { label: "Política de Privacidad", href: "#" },
@@ -79,8 +78,10 @@ const Footer = () => {
               <ul className="flex flex-col" style={{ gap: "0.6rem" }}>
                 {items.map((item) => (
                   <li key={item.label}>
-                    <Link
+                    <a
                       href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="group flex items-center transition-colors duration-200"
                       style={{ color: "#555", fontSize: "0.65rem", letterSpacing: "0.08em", gap: "0.4rem" }}
                     >
@@ -91,7 +92,7 @@ const Footer = () => {
                         ▸
                       </span>
                       <span className="group-hover:text-white transition-colors duration-200">{item.label}</span>
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

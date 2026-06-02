@@ -3,9 +3,9 @@ const MarqueeBanner = () => {
     "CRASH TRAINING",
     "ENTRENA SIN LÍMITES",
     "COACHES CERTIFICADOS",
-    "TECNOLOGÍA DE PUNTA",
+    "RUTINAS PLANIFICADAS",
     "RESULTADOS GARANTIZADOS",
-    "24/7 ACCESO",
+    "PROGRAMAS DE COMUNIDAD",
   ];
 
   return (

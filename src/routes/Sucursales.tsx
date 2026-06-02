@@ -62,7 +62,7 @@ const Sucursales = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
-            Volver al inicio
+            VOLVER AL INICIO
           </a>
 
           <div className="text-center mb-16">
