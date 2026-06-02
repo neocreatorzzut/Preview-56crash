@@ -1,20 +1,39 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
-const heroAthlete = "/assets/hero-athlete.webp";
+const heroImages = [
+  { src: "/assets/hero-athlete.webp", alt: "Crash Training Gym" },
+  { src: "/assets/hero-crash-sign.webp", alt: "Crash Training — letrero" },
+];
 
 const HeroSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveIndex(i => (i + 1) % heroImages.length);
+    }, 10000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Images — crossfade */}
       <div className="absolute inset-0">
-        <img
-          src={heroAthlete}
-          alt="Crash Training Gym"
-          className="w-full h-full object-cover opacity-60"
-          fetchPriority="high"
-          decoding="async"
-        />
+        {heroImages.map((img, i) => (
+          <img
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
+            className="absolute inset-0 w-full h-full object-cover opacity-60 transition-opacity duration-[1500ms]"
+            style={{ opacity: i === activeIndex ? 0.6 : 0 }}
+            fetchPriority={i === 0 ? "high" : undefined}
+            decoding="async"
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-hero-glow" />
       </div>
