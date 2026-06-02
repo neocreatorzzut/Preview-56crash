@@ -32,7 +32,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20">
         <div className="max-w-3xl">
-          <div className="inline-block px-4 py-2 mb-6 rounded-full border border-primary/30 bg-primary/10">
+          <div className="inline-block px-4 py-2 mb-6 border border-primary/30 bg-primary/10">
             <span className="text-sm font-medium tracking-wider text-primary uppercase">
               El gimnasio del futuro
             </span>

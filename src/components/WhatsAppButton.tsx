@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import FAQButton from "@/components/FAQButton";
 
 const WHATSAPP_NUMBER = "573128077046";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -23,31 +24,33 @@ const WhatsAppButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
-      {/* Message Bubble */}
-      {showBubble && (
-        <div
-          className={`max-w-[220px] rounded-2xl rounded-br-sm px-4 py-3 text-xs leading-relaxed text-foreground transition-opacity duration-500 ${
-            fadingOut ? "opacity-0" : "opacity-100"
-          }`}
-          style={{
-            background: "rgba(255,255,255,0.1)",
-            border: "1px solid rgba(255,255,255,0.15)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-          }}
-        >
-          Háblanos si necesitas ayuda, información o adquirir un plan
-        </div>
-      )}
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+      {/* FAQ Button */}
+      <FAQButton />
 
-      {/* WhatsApp Button */}
-      <a
+      {/* WhatsApp row: bubble + button */}
+      <div className="flex items-center gap-3">
+        {showBubble && (
+          <div
+            className={`max-w-[220px] px-4 py-3 text-xs leading-relaxed text-foreground transition-opacity duration-500 ${
+              fadingOut ? "opacity-0" : "opacity-100"
+            }`}
+            style={{
+              background: "rgba(255,255,255,0.1)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+          >
+            Háblanos si necesitas ayuda, información o adquirir un plan
+          </div>
+        )}
+        <a
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
-        className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200 hover:scale-110"
+        className="group flex h-14 w-14 items-center justify-center transition-transform duration-200 hover:scale-110"
         style={{
           background: "rgba(255,255,255,0.1)",
           border: "1px solid rgba(255,255,255,0.15)",
@@ -79,7 +82,8 @@ const WhatsAppButton = () => {
             fill="#25D366"
           />
         </svg>
-      </a>
+        </a>
+      </div>
     </div>
   );
 };

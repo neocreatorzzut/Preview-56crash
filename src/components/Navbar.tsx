@@ -84,7 +84,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass mt-2 mx-4 rounded-lg p-4 animate-fade-in-up">
+        <div className="md:hidden glass mt-2 mx-4 p-4 animate-fade-in-up">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a

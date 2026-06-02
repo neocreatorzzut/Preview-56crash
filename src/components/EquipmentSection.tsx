@@ -34,7 +34,7 @@ const EquipmentSection = () => {
           {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-card rounded-2xl p-8 flex flex-col justify-center border border-border">
+            <div className="bg-card  p-8 flex flex-col justify-center border border-border">
               <BenefitItem
                 title="Equipo de última generación"
                 description="Para garantizar tu seguridad y maximizar tus resultados."
@@ -46,7 +46,7 @@ const EquipmentSection = () => {
               />
             </div>
             {/* Image */}
-            <div className="relative rounded-2xl overflow-hidden border-glow min-h-[280px]">
+            <div className="relative  overflow-hidden border-glow min-h-[280px]">
               <img
                 src={gymEquipment}
                 alt="Interior del gimnasio"
@@ -59,7 +59,7 @@ const EquipmentSection = () => {
           {/* Row 2 - Inverted */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Image with badge */}
-            <div className="relative rounded-2xl overflow-hidden border-glow min-h-[280px]">
+            <div className="relative  overflow-hidden border-glow min-h-[280px]">
               <img
                 src={gymInterior2}
                 alt="Recepción del gimnasio"
@@ -68,7 +68,7 @@ const EquipmentSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             </div>
             {/* Text Block */}
-            <div className="bg-card rounded-2xl p-8 flex flex-col justify-center border border-border">
+            <div className="bg-card  p-8 flex flex-col justify-center border border-border">
               <BenefitItem
                 title="Equipamiento cardiovascular premium"
                 description="Equipamiento cardiovascular premium para tu entrenamiento."
@@ -84,7 +84,7 @@ const EquipmentSection = () => {
           {/* Row 3 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-card rounded-2xl p-8 flex flex-col justify-center border border-border">
+            <div className="bg-card  p-8 flex flex-col justify-center border border-border">
               <BenefitItem
                 title="Tecnología de tracking integrada"
                 description="Monitorea tu progreso con tecnología de seguimiento avanzada."
@@ -96,7 +96,7 @@ const EquipmentSection = () => {
               />
             </div>
             {/* Image */}
-            <div className="relative rounded-2xl overflow-hidden border-glow min-h-[280px]">
+            <div className="relative  overflow-hidden border-glow min-h-[280px]">
               <img
                 src={gymInterior3}
                 alt="Área de entrenamiento"
@@ -111,7 +111,7 @@ const EquipmentSection = () => {
         <div className="flex justify-center mt-12">
           <Link
             href="/sucursales"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
           >
             <Building2 className="w-5 h-5" />
             ¡REVISA NUESTRAS SUCURSALES!
@@ -124,7 +124,7 @@ const EquipmentSection = () => {
 
 const BenefitItem = ({ title, description, className = "" }: { title: string; description: string; className?: string }) => (
   <div className={`flex items-start gap-4 ${className}`}>
-    <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
+    <div className="w-7 h-7 bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
       <Check className="w-4 h-4 text-primary" />
     </div>
     <div>

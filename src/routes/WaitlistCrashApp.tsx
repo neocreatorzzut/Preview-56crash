@@ -192,64 +192,6 @@ export default function WaitlistCrashApp() {
         </div>
       </section>
 
-      {/* Offer Block */}
-      <div className="wl-offer-block">
-        <div className="wl-offer-inner">
-          <div className="wl-offer-left">
-            <span className="wl-offer-tag">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#cc1a1a" strokeWidth="2.5">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
-              Oferta exclusiva waitlist
-            </span>
-            <div className="wl-offer-title">
-              3 Meses de Acceso<br />Completo
-            </div>
-            <p className="wl-offer-desc">
-              Inscríbete hoy y obtén los primeros 3 meses por el precio de uno.
-              Sin trucos — solo recompensa por entrar temprano.
-            </p>
-          </div>
-          <div className="wl-offer-price">
-            <span className="wl-price-old">$109.500 COP · $30 USD valor normal</span>
-            <span className="wl-price-new">$36.500</span>
-            <span className="wl-price-usd">≈ $10 USD</span>
-            <span className="wl-price-period">COP · 3 meses · pago único</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="wl-stats-wrap">
-        <div className="wl-stats-inner">
-          <div className="wl-stat">
-            <span className="wl-stat-num">300+</span>
-            <span className="wl-stat-label">Miembros Activos</span>
-          </div>
-          <div className="wl-stat">
-            <span className="wl-stat-num">PWA</span>
-            <span className="wl-stat-label">Sin Descarga</span>
-          </div>
-          <div className="wl-stat">
-            <span className="wl-stat-num">$10</span>
-            <span className="wl-stat-label">/ mes normal</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Features */}
-      <section className="wl-features">
-        <div className="wl-features-grid">
-          {FEATURES.map((f) => (
-            <div key={f.num} className="wl-feature" data-num={f.num}>
-              <span className="wl-feature-icon">{f.icon}</span>
-              <div className="wl-feature-title">{f.title}</div>
-              <p className="wl-feature-desc">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Form */}
       <section className="wl-form-section">
         <div className="wl-form-header">
@@ -315,6 +257,64 @@ export default function WaitlistCrashApp() {
             <p className="wl-form-footnote">Sin spam. Te contactamos con tu código cuando lancemos.</p>
           </form>
         )}
+      </section>
+
+      {/* Offer Block */}
+      <div className="wl-offer-block">
+        <div className="wl-offer-inner">
+          <div className="wl-offer-left">
+            <span className="wl-offer-tag">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#cc1a1a" strokeWidth="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              Oferta exclusiva waitlist
+            </span>
+            <div className="wl-offer-title">
+              3 Meses de Acceso<br />Completo
+            </div>
+            <p className="wl-offer-desc">
+              Inscríbete hoy y obtén los primeros 3 meses por el precio de uno.
+              Sin trucos — solo recompensa por entrar temprano.
+            </p>
+          </div>
+          <div className="wl-offer-price">
+            <span className="wl-price-old">$109.500 COP · $30 USD valor normal</span>
+            <span className="wl-price-new">$36.500</span>
+            <span className="wl-price-usd">≈ $10 USD</span>
+            <span className="wl-price-period">COP · 3 meses · pago único</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div className="wl-stats-wrap">
+        <div className="wl-stats-inner">
+          <div className="wl-stat">
+            <span className="wl-stat-num">300+</span>
+            <span className="wl-stat-label">Miembros Activos</span>
+          </div>
+          <div className="wl-stat">
+            <span className="wl-stat-num">PWA</span>
+            <span className="wl-stat-label">Sin Descarga</span>
+          </div>
+          <div className="wl-stat">
+            <span className="wl-stat-num">$10</span>
+            <span className="wl-stat-label">/ mes normal</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Features */}
+      <section className="wl-features">
+        <div className="wl-features-grid">
+          {FEATURES.map((f) => (
+            <div key={f.num} className="wl-feature" data-num={f.num}>
+              <span className="wl-feature-icon">{f.icon}</span>
+              <div className="wl-feature-title">{f.title}</div>
+              <p className="wl-feature-desc">{f.desc}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Footer */}

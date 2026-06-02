@@ -37,7 +37,7 @@ const CoachesPreSection = () => {
           </div>
 
           {/* Team Photo */}
-          <div className="relative rounded-2xl overflow-hidden border border-border/50 group">
+          <div className="relative overflow-hidden border border-border/50 group">
             <img
               src={teamGroup}
               alt="Equipo Crash Training"
