@@ -475,7 +475,8 @@ body {
   gap: 3rem;
   margin-bottom: 3rem;
 }
-.wl-footer-brand .wl-logo { font-size: 1.6rem; display: block; margin-bottom: 0.8rem; }
+.wl-footer-logo { height: 40px; width: auto; display: block; margin-bottom: 0.6rem; }
+.wl-footer-brand .wl-logo { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.12em; display: block; margin-bottom: 0.8rem; color: var(--wl-white); }
 .wl-footer-brand p { font-size: 0.65rem; color: var(--wl-muted); line-height: 1.7; max-width: 220px; }
 .wl-footer-col-title {
   font-family: 'Orbitron', sans-serif; font-weight: 700;

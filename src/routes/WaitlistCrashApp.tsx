@@ -321,7 +321,8 @@ export default function WaitlistCrashApp() {
       <footer className="wl-footer-rich">
         <div className="wl-footer-top">
           <div className="wl-footer-brand">
-            <span className="wl-logo">CRASH//</span>
+            <img src="/assets/logo.webp" alt="Crash Training" className="wl-footer-logo" loading="lazy" decoding="async" />
+            <span className="wl-logo">Crash Training App</span>
             <p>La app de entrenamiento de tu gym. Diseñada para atletas reales, sin excusas.</p>
           </div>
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
