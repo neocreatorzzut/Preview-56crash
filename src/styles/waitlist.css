@@ -218,7 +218,11 @@ body {
 
 @media (max-width: 750px) {
   .wl-hero { flex-direction: column; gap: 2rem; padding: 3rem 1.5rem 2rem; }
-  .wl-hero-visual { width: min(260px, 80vw); }
+  .wl-hero-visual {
+    width: calc(100% + 3rem); /* break out of 2 × 1.5rem padding → full bleed */
+    margin-left: -1.5rem;
+  }
+  .wl-hero-visual::after { display: none; } /* hide border on full-bleed */
 }
 
 /* ── OFFER BLOCK ── */
