@@ -128,10 +128,10 @@ const PlansSection = () => {
           </p>
 
           {/* Tab Switcher */}
-          <div className="inline-flex rounded-xl bg-card border border-border p-1.5 gap-1">
+          <div className="inline-flex bg-card border border-border p-1.5 gap-1">
             <button
               onClick={() => setActiveTab("monthly")}
-              className={`px-6 py-2.5 rounded-lg text-sm font-display font-medium tracking-wide uppercase transition-all ${
+              className={`px-6 py-2.5 text-sm font-display font-medium tracking-wide uppercase transition-all ${
                 activeTab === "monthly"
                   ? "bg-primary text-primary-foreground shadow-lg"
                   : "text-muted-foreground hover:text-foreground"
@@ -141,7 +141,7 @@ const PlansSection = () => {
             </button>
             <button
               onClick={() => setActiveTab("savings")}
-              className={`px-6 py-2.5 rounded-lg text-sm font-display font-medium tracking-wide uppercase transition-all ${
+              className={`px-6 py-2.5 text-sm font-display font-medium tracking-wide uppercase transition-all ${
                 activeTab === "savings"
                   ? "bg-primary text-primary-foreground shadow-lg"
                   : "text-muted-foreground hover:text-foreground"
@@ -157,7 +157,7 @@ const PlansSection = () => {
           {plans.map((plan, index) => (
             <div
               key={`${activeTab}-${index}`}
-              className={`relative rounded-2xl p-8 transition-all duration-500 animate-fade-in-up ${
+              className={`relative p-8 transition-all duration-500 animate-fade-in-up ${
                 plan.highlighted
                   ? "bg-primary/10 border-2 border-primary glow-primary scale-105 z-10"
                   : "bg-card border border-primary/30 hover:border-primary/60"
@@ -166,7 +166,7 @@ const PlansSection = () => {
             >
               {/* Badge */}
               {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-medium flex items-center gap-1.5">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-primary text-primary-foreground text-sm font-medium flex items-center gap-1.5">
                   <Star className="w-4 h-4 fill-current" />
                   {activeTab === "monthly" ? "Recomendado" : "Mejor Valor"}
                 </div>
@@ -174,7 +174,7 @@ const PlansSection = () => {
 
               {/* Savings badge */}
               {activeTab === "savings" && "savings" in plan && !plan.highlighted && (
-                <div className="absolute -top-3 right-6 px-3 py-1 rounded-full bg-accent/20 text-accent-foreground text-xs font-semibold border border-accent/30">
+                <div className="absolute -top-3 right-6 px-3 py-1 bg-accent/20 text-accent-foreground text-xs font-semibold border border-accent/30">
                   Ahorra {(plan as any).savings}
                 </div>
               )}
@@ -197,7 +197,7 @@ const PlansSection = () => {
               <div className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                    <div className="w-5 h-5 bg-primary/20 flex items-center justify-center shrink-0">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-sm text-foreground">{feature}</span>

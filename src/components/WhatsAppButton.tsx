@@ -27,7 +27,7 @@ const WhatsAppButton = () => {
       {/* Message Bubble */}
       {showBubble && (
         <div
-          className={`max-w-[220px] rounded-2xl rounded-br-sm px-4 py-3 text-xs leading-relaxed text-foreground transition-opacity duration-500 ${
+          className={`max-w-[220px] px-4 py-3 text-xs leading-relaxed text-foreground transition-opacity duration-500 ${
             fadingOut ? "opacity-0" : "opacity-100"
           }`}
           style={{
@@ -47,7 +47,7 @@ const WhatsAppButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
-        className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200 hover:scale-110"
+        className="group flex h-14 w-14 items-center justify-center transition-transform duration-200 hover:scale-110"
         style={{
           background: "rgba(255,255,255,0.1)",
           border: "1px solid rgba(255,255,255,0.15)",

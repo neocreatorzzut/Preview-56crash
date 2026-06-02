@@ -86,7 +86,7 @@ const Sucursales = () => {
             {branches.map((branch, index) => (
               <div key={index} className="space-y-0">
                 <div
-                  className={`group grid md:grid-cols-2 gap-0 rounded-t-2xl overflow-hidden border border-b-0 border-border/50 bg-card ${
+                  className={`group grid md:grid-cols-2 gap-0 overflow-hidden border border-b-0 border-border/50 bg-card ${
                     index % 2 !== 0 ? "md:[direction:rtl]" : ""
                   }`}
                 >
@@ -99,7 +99,7 @@ const Sucursales = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
                     {branch.flagship && (
-                      <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-xs font-semibold text-primary uppercase tracking-wider backdrop-blur-sm">
+                      <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary/20 border border-primary/30 text-xs font-semibold text-primary uppercase tracking-wider backdrop-blur-sm">
                         Sede Principal
                       </div>
                     )}
@@ -114,7 +114,7 @@ const Sucursales = () => {
 
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 bg-primary/20 flex items-center justify-center shrink-0">
                           <MapPin className="w-5 h-5 text-primary" />
                         </div>
                         <div>
@@ -125,7 +125,7 @@ const Sucursales = () => {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 bg-primary/20 flex items-center justify-center shrink-0">
                           <Clock className="w-5 h-5 text-primary" />
                         </div>
                         <div>
@@ -135,7 +135,7 @@ const Sucursales = () => {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 bg-primary/20 flex items-center justify-center shrink-0">
                           <Phone className="w-5 h-5 text-primary" />
                         </div>
                         <div>
@@ -149,7 +149,7 @@ const Sucursales = () => {
                       href={branch.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors w-fit"
+                      className="inline-flex items-center gap-2 mt-8 px-6 py-3 border border-primary/30 bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors w-fit"
                     >
                       <Navigation className="w-4 h-4" />
                       Cómo llegar
@@ -158,7 +158,7 @@ const Sucursales = () => {
                 </div>
 
                 {/* Embedded Google Map */}
-                <div className="rounded-b-2xl overflow-hidden border border-t-0 border-border/50">
+                <div className="overflow-hidden border border-t-0 border-border/50">
                   <iframe
                     src={branch.mapEmbed}
                     width="100%"
