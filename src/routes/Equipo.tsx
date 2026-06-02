@@ -1,12 +1,15 @@
+"use client";
+
 import { ArrowLeft, Instagram, Twitter } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import coach1 from "@/assets/coach-1.jpg";
-import coach2 from "@/assets/coach-2.jpg";
-import coach3 from "@/assets/coach-3.jpg";
-import coach4 from "@/assets/coach-4.png";
-import coach5 from "@/assets/coach-5.png";
+
+const coach1 = "/assets/coach-1.jpg";
+const coach2 = "/assets/coach-2.jpg";
+const coach3 = "/assets/coach-3.jpg";
+const coach4 = "/assets/coach-4.png";
+const coach5 = "/assets/coach-5.png";
 
 const coaches = [
   {

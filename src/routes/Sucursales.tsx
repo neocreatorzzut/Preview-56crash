@@ -1,10 +1,13 @@
+"use client";
+
 import { ArrowLeft, MapPin, Clock, Phone, Navigation } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import gymInterior1 from "@/assets/gym-interior-1.jpg";
-import gymInterior2 from "@/assets/gym-interior-2.jpg";
-import gymInterior3 from "@/assets/gym-interior-3.jpg";
+
+const gymInterior1 = "/assets/gym-interior-1.jpg";
+const gymInterior2 = "/assets/gym-interior-2.jpg";
+const gymInterior3 = "/assets/gym-interior-3.jpg";
 
 const branches = [
   {

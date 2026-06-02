@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { Check, Building2 } from "lucide-react";
-import gymEquipment from "@/assets/gym-equipment.jpg";
-import gymInterior2 from "@/assets/gym-interior-2.jpg";
-import gymInterior3 from "@/assets/gym-interior-3.jpg";
+
+const gymEquipment = "/assets/gym-equipment.jpg";
+const gymInterior2 = "/assets/gym-interior-2.jpg";
+const gymInterior3 = "/assets/gym-interior-3.jpg";
 
 
 
@@ -107,13 +109,13 @@ const EquipmentSection = () => {
 
         {/* Branches Button */}
         <div className="flex justify-center mt-12">
-          <a
+          <Link
             href="/sucursales"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
           >
             <Building2 className="w-5 h-5" />
             ¡REVISA NUESTRAS SUCURSALES!
-          </a>
+          </Link>
         </div>
       </div>
     </section>
