@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Quote, Users, MapPin, Award, Clock } from "lucide-react";
 
-const community1 = "/assets/community-1.jpg";
-const community2 = "/assets/community-2.jpg";
-const community3 = "/assets/community-3.jpg";
-const community4 = "/assets/community-4.jpg";
-const community5 = "/assets/community-5.jpg";
-const community6 = "/assets/community-6.jpg";
+const community1 = "/assets/community-1.webp";
+const community2 = "/assets/community-2.webp";
+const community3 = "/assets/community-3.webp";
+const community4 = "/assets/community-4.webp";
+const community5 = "/assets/community-5.webp";
+const community6 = "/assets/community-6.webp";
 
 const testimonials = [
   {
@@ -164,7 +164,9 @@ const TestimonialsSection = () => {
                     src={photo}
                     alt={`Comunidad Crash Training ${index + 1}`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+                  loading="lazy"
+          decoding="async"
+        />
                 </div>
               ))}
             </div>

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Dumbbell, Music, Flame, Swords, Calendar } from "lucide-react";
 
-const personalTraining = "/assets/personal-training-new.png";
-const danceClass = "/assets/dance-class.jpg";
-const conditioning = "/assets/conditioning.jpg";
-const kickboxing = "/assets/kickboxing.png";
+const personalTraining = "/assets/personal-training-new.webp";
+const danceClass = "/assets/dance-class.webp";
+const conditioning = "/assets/conditioning.webp";
+const kickboxing = "/assets/kickboxing.webp";
 
 const services = [
   {
@@ -67,7 +67,9 @@ const ServicesSection = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                loading="lazy"
+          decoding="async"
+        />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
 

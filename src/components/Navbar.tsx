@@ -39,7 +39,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img src="/assets/logo.jpg" alt="Crash Training" className="h-10 w-auto" />
+          <img src="/assets/logo.webp" alt="Crash Training" className="h-10 w-auto" loading="lazy"
+          decoding="async"
+        />
         </Link>
 
         {/* Desktop Navigation */}

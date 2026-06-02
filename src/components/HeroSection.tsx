@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const heroAthlete = "/assets/hero-athlete.jpg";
+const heroAthlete = "/assets/hero-athlete.webp";
 
 const HeroSection = () => {
   return (
@@ -12,6 +12,8 @@ const HeroSection = () => {
           src={heroAthlete}
           alt="Crash Training Gym"
           className="w-full h-full object-cover opacity-60"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-hero-glow" />
