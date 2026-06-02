@@ -43,51 +43,18 @@ const Navbar = () => {
         />
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.target}
-              rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
-            >
-              {link.label}
-            </a>
-          ))}
-          {pageLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <a href="/#planes">
-            <Button variant="glow" size="lg">
-              Únete Ahora
-            </Button>
-          </a>
-        </div>
-
-        {/* Mobile Menu Toggle */}
+        {/* Menu Toggle (all screen sizes) */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="text-foreground p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass mt-2 mx-4 p-4 animate-fade-in-up">
+        <div className="glass mt-2 mx-4 p-4 animate-fade-in-up">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
