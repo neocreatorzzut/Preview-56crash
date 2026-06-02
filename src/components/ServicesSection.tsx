@@ -1,8 +1,10 @@
+import Link from "next/link";
 import { Dumbbell, Music, Flame, Swords, Calendar } from "lucide-react";
-import personalTraining from "@/assets/personal-training-new.png";
-import danceClass from "@/assets/dance-class.jpg";
-import conditioning from "@/assets/conditioning.jpg";
-import kickboxing from "@/assets/kickboxing.png";
+
+const personalTraining = "/assets/personal-training-new.png";
+const danceClass = "/assets/dance-class.jpg";
+const conditioning = "/assets/conditioning.jpg";
+const kickboxing = "/assets/kickboxing.png";
 
 const services = [
   {
@@ -92,13 +94,13 @@ const ServicesSection = () => {
 
         {/* Schedule Button */}
         <div className="flex justify-center mt-12">
-          <a
+          <Link
             href="/horarios"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
           >
             <Calendar className="w-5 h-5" />
             VER HORARIOS DE CLASES
-          </a>
+          </Link>
         </div>
       </div>
     </section>

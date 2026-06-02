@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
-import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   const quickLinks = [
@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a href="#" className="inline-block mb-6">
-              <img src={logo} alt="Crash Training" className="h-12 w-auto" />
+              <img src="/assets/logo.jpg" alt="Crash Training" className="h-12 w-auto" />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Transformando vidas desde 2014. El gimnasio del futuro está aquí. 
@@ -50,12 +50,21 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                  >
-                    {link.label}
-                  </a>
+                  {link.href.startsWith("/") && !link.href.startsWith("/#") ? (
+                    <Link
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

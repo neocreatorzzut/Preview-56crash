@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,9 +38,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
-          <img src={logo} alt="Crash Training" className="h-10 w-auto" />
-        </a>
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/assets/logo.jpg" alt="Crash Training" className="h-10 w-auto" />
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -54,13 +54,13 @@ const Navbar = () => {
             </a>
           ))}
           {pageLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -97,14 +97,14 @@ const Navbar = () => {
               </a>
             ))}
             {pageLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a href="/#planes" onClick={() => setIsMobileMenuOpen(false)}>
               <Button variant="glow" className="w-full mt-2">
