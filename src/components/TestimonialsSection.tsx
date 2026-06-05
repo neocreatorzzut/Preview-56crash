@@ -159,7 +159,7 @@ const TestimonialsSection = () => {
                 {communityPhotos.map((photo, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl snap-center"
+                    className="relative flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl snap-center"
                   >
                     <img
                       src={photo}
@@ -167,6 +167,12 @@ const TestimonialsSection = () => {
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                       decoding="async"
+                    />
+                    <img
+                      src="/assets/logo.webp"
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute bottom-3 left-3 h-6 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
                     />
                   </div>
                 ))}

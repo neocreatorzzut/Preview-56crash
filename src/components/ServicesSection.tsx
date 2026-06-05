@@ -71,6 +71,12 @@ const ServicesSection = () => {
           decoding="async"
         />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                <img
+                  src="/assets/logo.webp"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute top-3 right-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+                />
               </div>
 
               {/* Content */}

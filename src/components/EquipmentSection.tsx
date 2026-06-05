@@ -55,6 +55,12 @@ const EquipmentSection = () => {
           decoding="async"
         />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <img
+                src="/assets/logo.webp"
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-3 left-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+              />
             </div>
           </div>
 
@@ -70,6 +76,12 @@ const EquipmentSection = () => {
           decoding="async"
         />
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <img
+                src="/assets/logo.webp"
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-3 right-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+              />
             </div>
             {/* Text Block */}
             <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
@@ -109,6 +121,12 @@ const EquipmentSection = () => {
           decoding="async"
         />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <img
+                src="/assets/logo.webp"
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-3 left-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+              />
             </div>
           </div>
         </div>
