@@ -62,14 +62,14 @@ const Horarios = () => {
           {/* Legend */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {Object.entries(classColors).map(([name, colors]) => (
-              <div key={name} className={`px-3 py-1.5 border text-xs font-medium ${colors}`}>
+              <div key={name} className={`px-3 py-1.5 rounded-full border text-xs font-medium ${colors}`}>
                 {name}
               </div>
             ))}
           </div>
 
           {/* Schedule Table - Desktop */}
-          <div className="hidden md:block border border-border overflow-hidden bg-card">
+          <div className="hidden md:block overflow-hidden rounded-2xl bg-card card-glass">
             <div className="grid grid-cols-7">
               <div className="p-4 bg-muted/50 border-b border-border flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
@@ -88,7 +88,7 @@ const Horarios = () => {
                   </div>
                   {row.classes.map((cls, j) => (
                     <div key={`${i}-${j}`} className="p-3 border-b border-l border-border flex items-center justify-center">
-                      <span className={`px-3 py-1.5 border text-xs font-medium ${classColors[cls]}`}>
+                      <span className={`px-3 py-1.5 rounded-full border text-xs font-medium ${classColors[cls]}`}>
                         {cls}
                       </span>
                     </div>
@@ -101,14 +101,14 @@ const Horarios = () => {
           {/* Schedule Cards - Mobile */}
           <div className="md:hidden space-y-4">
             {schedule.map((row, i) => (
-              <div key={i} className="border border-border bg-card p-4">
+              <div key={i} className="rounded-2xl bg-card card-glass p-4">
                 <div className="flex items-center gap-2 mb-3">
                   <Clock className="w-4 h-4 text-primary" />
                   <span className="font-display font-semibold text-sm">{row.time}</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {row.classes.map((cls, j) => (
-                    <div key={j} className={`px-3 py-2 border text-xs font-medium text-center ${classColors[cls]}`}>
+                    <div key={j} className={`px-3 py-2 rounded-xl border text-xs font-medium text-center ${classColors[cls]}`}>
                       <span className="block text-[10px] text-muted-foreground mb-0.5">{days[j]}</span>
                       {cls}
                     </div>
