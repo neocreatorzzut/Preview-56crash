@@ -87,20 +87,20 @@ const TestimonialsSection = () => {
 
           {/* Carousel */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl bg-card p-8 md:p-12 card-glass">
-              <Quote className="w-12 h-12 text-primary/30 mb-6" />
-              
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8">
+            <div className="overflow-hidden rounded-2xl bg-card p-5 md:p-7 card-glass flex flex-col h-56 md:h-48">
+              <Quote className="w-5 h-5 text-primary/30 mb-3 shrink-0" />
+
+              <p className="text-sm md:text-base text-foreground leading-relaxed flex-1 overflow-hidden">
                 "{testimonials[currentIndex].quote}"
               </p>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center font-display font-bold text-primary">
+
+              <div className="flex items-center gap-3 mt-4 shrink-0">
+                <div className="w-9 h-9 bg-primary/20 rounded-lg flex items-center justify-center font-display font-bold text-primary text-xs shrink-0">
                   {testimonials[currentIndex].image}
                 </div>
                 <div>
-                  <p className="font-display font-bold text-lg">{testimonials[currentIndex].name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonials[currentIndex].role}</p>
+                  <p className="font-display font-bold text-sm">{testimonials[currentIndex].name}</p>
+                  <p className="text-xs text-muted-foreground">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </div>
