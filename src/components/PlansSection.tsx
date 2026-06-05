@@ -194,7 +194,7 @@ const PlansSection = () => {
                 <h3 className="font-display text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
                 <div className="flex items-end justify-center gap-1">
-                  <span className="font-display text-4xl md:text-5xl font-bold text-gradient-primary">
+                  <span className="font-display text-3xl md:text-3xl font-bold text-gradient-primary">
                     ${plan.price}
                   </span>
                 </div>
