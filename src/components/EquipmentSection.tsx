@@ -34,7 +34,7 @@ const EquipmentSection = () => {
           {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-black/20 p-8 flex flex-col justify-center border border-border">
+            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
               <BenefitItem
                 title="Equipo de última generación"
                 description="Para garantizar tu seguridad y maximizar tus resultados."
@@ -46,7 +46,7 @@ const EquipmentSection = () => {
               />
             </div>
             {/* Image */}
-            <div className="relative  overflow-hidden border-glow min-h-[280px]">
+            <div className="relative overflow-hidden rounded-2xl card-glass min-h-[280px]">
               <img
                 src={gymEquipment}
                 alt="Interior del gimnasio"
@@ -55,13 +55,19 @@ const EquipmentSection = () => {
           decoding="async"
         />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <img
+                src="/assets/logo.webp"
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-3 left-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+              />
             </div>
           </div>
 
           {/* Row 2 - Inverted */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Image with badge */}
-            <div className="relative  overflow-hidden border-glow min-h-[280px]">
+            <div className="relative overflow-hidden rounded-2xl card-glass min-h-[280px]">
               <img
                 src={gymInterior2}
                 alt="Recepción del gimnasio"
@@ -70,9 +76,15 @@ const EquipmentSection = () => {
           decoding="async"
         />
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <img
+                src="/assets/logo.webp"
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-3 right-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+              />
             </div>
             {/* Text Block */}
-            <div className="bg-black/20 p-8 flex flex-col justify-center border border-border">
+            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
               <BenefitItem
                 title="Mecanismos Cardiovasculares"
                 description="Planeaciones de entrenamiento premium con mecanismos cardiovasculares."
@@ -88,7 +100,7 @@ const EquipmentSection = () => {
           {/* Row 3 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-black/20 p-8 flex flex-col justify-center border border-border">
+            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
               <BenefitItem
                 title="Tracking Personalizado"
                 description="Supervisión de progreso personal con profesionales."
@@ -100,7 +112,7 @@ const EquipmentSection = () => {
               />
             </div>
             {/* Image */}
-            <div className="relative  overflow-hidden border-glow min-h-[280px]">
+            <div className="relative overflow-hidden rounded-2xl card-glass min-h-[280px]">
               <img
                 src={gymInterior3}
                 alt="Área de entrenamiento"
@@ -109,6 +121,12 @@ const EquipmentSection = () => {
           decoding="async"
         />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <img
+                src="/assets/logo.webp"
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-3 left-3 h-7 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+              />
             </div>
           </div>
         </div>
@@ -117,7 +135,7 @@ const EquipmentSection = () => {
         <div className="flex justify-center mt-12">
           <Link
             href="/sucursales"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-all duration-300 card-glass-glow"
           >
             <Building2 className="w-5 h-5" />
             ¡REVISA NUESTRAS SUCURSALES!
@@ -130,7 +148,7 @@ const EquipmentSection = () => {
 
 const BenefitItem = ({ title, description, className = "" }: { title: string; description: string; className?: string }) => (
   <div className={`flex items-start gap-4 ${className}`}>
-    <div className="w-7 h-7 bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
+    <div className="w-7 h-7 bg-primary/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
       <Check className="w-4 h-4 text-primary" />
     </div>
     <div>

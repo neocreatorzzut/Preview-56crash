@@ -88,7 +88,7 @@ const Equipo = () => {
             {coaches.map((coach, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden bg-card border border-border/50 hover:border-primary/50 transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl bg-card card-glass transition-all duration-500"
               >
                 {/* Image */}
                 <div className="relative h-80 overflow-hidden">
@@ -103,10 +103,10 @@ const Equipo = () => {
 
                   {/* Social Icons */}
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="w-10 h-10 glass flex items-center justify-center hover:bg-primary/20 transition-colors">
+                    <button className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
                       <Instagram className="w-5 h-5" />
                     </button>
-                    <button className="w-10 h-10 glass flex items-center justify-center hover:bg-primary/20 transition-colors">
+                    <button className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
                       <Twitter className="w-5 h-5" />
                     </button>
                   </div>
@@ -123,7 +123,7 @@ const Equipo = () => {
                     {coach.certifications.map((cert, certIndex) => (
                       <span
                         key={certIndex}
-                        className="px-3 py-1 text-xs bg-primary/10 text-primary border border-primary/20"
+                        className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
                       >
                         {cert}
                       </span>

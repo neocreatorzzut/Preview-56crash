@@ -40,6 +40,7 @@ const WhatsAppButton = () => {
               border: "1px solid rgba(255,255,255,0.15)",
               backdropFilter: "blur(12px)",
               WebkitBackdropFilter: "blur(12px)",
+              borderRadius: "0.75rem",
             }}
           >
             Háblanos si necesitas ayuda, información o adquirir un plan
@@ -56,6 +57,7 @@ const WhatsAppButton = () => {
           border: "1px solid rgba(255,255,255,0.15)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
+          borderRadius: "50%",
         }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.backdropFilter = "blur(16px)";

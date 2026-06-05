@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +29,7 @@ const Navbar = () => {
     { href: "/sucursales", label: "Sucursales" },
     { href: "/horarios", label: "Horarios" },
     { href: "/equipo", label: "Equipo" },
+    { href: "/blog", label: "Blog" },
     { href: "/waitlist_crash_app", label: "App" },
   ];
 
@@ -36,12 +40,13 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/assets/logo.webp" alt="Crash Training" className="h-10 w-auto" loading="lazy"
-          decoding="async"
-        />
-        </Link>
+        {/* Logo — oculto en home (aparece en el hero) */}
+        {!isHome && (
+          <Link href="/" className="flex items-center gap-2">
+            <img src="/assets/logo.webp" alt="Crash Training" className="h-10 w-auto" loading="lazy" decoding="async" />
+          </Link>
+        )}
+        {isHome && <div />}
 
         {/* Menu Toggle (all screen sizes) */}
         <button

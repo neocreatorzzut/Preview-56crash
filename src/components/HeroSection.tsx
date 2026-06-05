@@ -29,18 +29,17 @@ const HeroSection = () => {
             src={img.src}
             alt={img.alt}
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: i === activeIndex ? 0.6 : 0, transition: 'opacity 2s ease' }}
+            style={{ opacity: i === activeIndex ? 0.75 : 0, transition: 'opacity 2s ease' }}
             fetchPriority={i === 0 ? "high" : undefined}
             decoding="async"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-hero-glow" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-float" />
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-black/10 rounded-full blur-[128px] animate-float" />
+      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-black/8 rounded-full blur-[100px]" />
 
       {/* Geometric Lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -53,10 +52,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20">
         <div className="max-w-3xl">
-          <div className="inline-block px-4 py-2 mb-6 border border-primary/30 bg-primary/10">
-            <span className="text-sm font-medium tracking-wider text-primary uppercase">
-              El gimnasio del futuro
-            </span>
+          <div className="mb-6">
+            <img
+              src="/assets/logo.webp"
+              alt="Crash Training"
+              className="h-16 md:h-20 w-auto"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 tracking-tight">

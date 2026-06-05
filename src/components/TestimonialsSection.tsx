@@ -87,20 +87,20 @@ const TestimonialsSection = () => {
 
           {/* Carousel */}
           <div className="relative">
-            <div className="overflow-hidden bg-card border border-border/50 p-8 md:p-12">
-              <Quote className="w-12 h-12 text-primary/30 mb-6" />
-              
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8">
+            <div className="overflow-hidden rounded-2xl bg-card p-5 md:p-7 card-glass">
+              <Quote className="w-5 h-5 text-primary/30 mb-3" />
+
+              <p className="text-sm md:text-base text-foreground leading-relaxed mb-4">
                 "{testimonials[currentIndex].quote}"
               </p>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-primary/20 flex items-center justify-center font-display font-bold text-primary">
+
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 bg-primary/20 rounded-lg flex items-center justify-center font-display font-bold text-primary text-xs shrink-0">
                   {testimonials[currentIndex].image}
                 </div>
                 <div>
-                  <p className="font-display font-bold text-lg">{testimonials[currentIndex].name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonials[currentIndex].role}</p>
+                  <p className="font-display font-bold text-sm">{testimonials[currentIndex].name}</p>
+                  <p className="text-xs text-muted-foreground">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
             <div className="flex justify-center gap-4 mt-6">
               <button
                 onClick={prevSlide}
-                className="w-12 h-12 border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+                className="w-12 h-12 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -126,7 +126,7 @@ const TestimonialsSection = () => {
               </div>
               <button
                 onClick={nextSlide}
-                className="w-12 h-12 border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+                className="w-12 h-12 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -142,24 +142,24 @@ const TestimonialsSection = () => {
             </h3>
           </div>
 
-          <div className="bg-primary/10 border-2 border-primary glow-primary p-4 md:p-6">
+          <div className="bg-black rounded-2xl card-glass-glow p-4 md:p-6">
             <div className="relative">
               <button
                 onClick={() => scrollPhotos("left")}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
               <div
                 ref={scrollRef}
-                className="flex gap-4 overflow-x-auto scrollbar-hide px-8 snap-x snap-mandatory"
+                className="flex gap-4 overflow-x-auto scrollbar-hide px-8 snap-x snap-mandatory bg-black"
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {communityPhotos.map((photo, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden border border-border/50 snap-center"
+                    className="relative flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl snap-center"
                   >
                     <img
                       src={photo}
@@ -168,13 +168,19 @@ const TestimonialsSection = () => {
                       loading="lazy"
                       decoding="async"
                     />
+                    <img
+                      src="/assets/logo.webp"
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute bottom-3 left-3 h-6 w-auto opacity-60 drop-shadow-md pointer-events-none select-none z-10"
+                    />
                   </div>
                 ))}
               </div>
 
               <button
                 onClick={() => scrollPhotos("right")}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-border bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/50 transition-all"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -187,9 +193,9 @@ const TestimonialsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-card border border-border/50 hover:border-primary/30 transition-all group"
+              className="text-center p-6 rounded-2xl bg-card transition-all group card-glass"
             >
-              <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <stat.icon className="w-7 h-7 text-primary" />
               </div>
               <p className="font-display text-4xl font-bold text-primary mb-2">{stat.value}</p>
