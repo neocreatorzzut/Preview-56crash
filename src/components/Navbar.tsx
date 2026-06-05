@@ -29,6 +29,7 @@ const Navbar = () => {
     { href: "/sucursales", label: "Sucursales" },
     { href: "/horarios", label: "Horarios" },
     { href: "/equipo", label: "Equipo" },
+    { href: "/blog", label: "Blog" },
     { href: "/waitlist_crash_app", label: "App" },
   ];
 
