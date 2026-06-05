@@ -21,10 +21,10 @@ const columns: Record<string, { label: string; href: string }[]> = {
     { label: "Contacto", href: "https://wa.me/573128077046" },
   ],
   "Legal": [
-    { label: "Política de Privacidad", href: "#" },
-    { label: "Términos y Condiciones", href: "#" },
-    { label: "Política de Cookies", href: "#" },
-    { label: "HABEAS DATA", href: "#" },
+    { label: "Política de Privacidad", href: "/privacidad" },
+    { label: "Términos y Condiciones", href: "/terminos" },
+    { label: "Política de Cookies", href: "/cookies" },
+    { label: "HABEAS DATA", href: "/habeas-data" },
   ],
 };
 

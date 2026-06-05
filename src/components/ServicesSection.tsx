@@ -59,7 +59,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-card/40 border border-border/30 hover:border-primary/50 transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-card/40 border border-border/30 hover:border-primary/50 card-glass transition-all duration-500"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
@@ -75,7 +75,7 @@ const ServicesSection = () => {
 
               {/* Content */}
               <div className="relative p-6 -mt-12 bg-card/40">
-                <div className="w-14 h-14 bg-primary flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-500">
+                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-500">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-display text-xl font-bold mb-3 tracking-wide">
@@ -98,7 +98,7 @@ const ServicesSection = () => {
         <div className="flex justify-center mt-12">
           <Link
             href="/horarios"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-transform duration-200 glow-primary"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-display font-semibold tracking-wide text-sm hover:scale-105 transition-all duration-300 card-glass-glow"
           >
             <Calendar className="w-5 h-5" />
             VER HORARIOS DE CLASES

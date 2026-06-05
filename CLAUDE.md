@@ -34,16 +34,16 @@ public/assets/          # Imágenes en formato WebP
 
 | Clase Tailwind | Fuente | Uso |
 |----------------|--------|-----|
-| `font-display` | Big Shoulders Display 900 | Todos los titulares |
+| `font-display` | Orbitron 700/900 (Google Fonts) | Todos los titulares |
 | `font-sans` | Inter | Cuerpo y UI general |
 
-La fuente `font-display` está configurada en `tailwind.config.ts` y el import de Google Fonts en `app/globals.css`. La página Waitlist también usa Big Shoulders Display vía `src/styles/waitlist.css`.
+La fuente `font-display` está configurada en `tailwind.config.ts` y se carga desde Google Fonts en `app/globals.css`.
 
 ## Diseño
 
-- **Sin border-radius** en ningún elemento interactivo (cards, botones, badges, inputs). La única excepción permitida es `rounded-full` en blur blobs decorativos (`blur-[...]`).
+- **Border-radius de cards y recuadros**: `--radius: 1.25rem` (20px) — controla el radio global de shadcn en `app/globals.css`. Se aplica a cards, inputs, modals, selects, etc.
+- **Botones**: siempre `rounded-full` (píldora). Definido en `src/components/ui/button.tsx`.
 - **Color primario** (`--primary`): Palatinate Blue `#173DED` / HSL `228 90% 51%`
-- **`--radius: 0rem`** en `app/globals.css` — controla el radio global de shadcn
 
 ## Imágenes
 
