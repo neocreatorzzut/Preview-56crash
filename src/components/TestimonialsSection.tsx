@@ -153,7 +153,7 @@ const TestimonialsSection = () => {
 
               <div
                 ref={scrollRef}
-                className="flex gap-4 overflow-x-auto scrollbar-hide px-8 snap-x snap-mandatory"
+                className="flex gap-4 overflow-x-auto scrollbar-hide px-8 snap-x snap-mandatory bg-black"
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {communityPhotos.map((photo, index) => (
