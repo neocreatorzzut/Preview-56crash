@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Orbitron:wght@700;900&family=Barlow+Condensed:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Barlow+Condensed:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('/fonts/Helvetica-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -70,7 +78,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Big Shoulders Display', sans-serif;
+    font-family: 'Helvetica Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
   }
 }
 
