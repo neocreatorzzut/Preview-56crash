@@ -29,13 +29,12 @@ const HeroSection = () => {
             src={img.src}
             alt={img.alt}
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: i === activeIndex ? 0.6 : 0, transition: 'opacity 2s ease' }}
+            style={{ opacity: i === activeIndex ? 0.75 : 0, transition: 'opacity 2s ease' }}
             fetchPriority={i === 0 ? "high" : undefined}
             decoding="async"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-hero-glow" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
       </div>
 
       {/* Decorative Elements */}
