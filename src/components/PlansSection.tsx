@@ -140,7 +140,7 @@ const PlansSection = () => {
           </p>
 
           {/* Tab Switcher */}
-          <div className="inline-flex rounded-full bg-card border border-border p-1.5 gap-1">
+          <div className="inline-flex rounded-full bg-card border border-border p-1.5 gap-1 card-glass">
             <button
               onClick={() => setActiveTab("monthly")}
               className={`px-6 py-2.5 rounded-full text-sm font-display font-medium tracking-wide uppercase transition-all ${
@@ -171,8 +171,8 @@ const PlansSection = () => {
               key={`${activeTab}-${index}`}
               className={`relative rounded-2xl p-8 transition-all duration-500 animate-fade-in-up ${
                 plan.highlighted
-                  ? "bg-primary/10 border-2 border-primary glow-primary scale-105 z-10"
-                  : "bg-card border border-primary/30 hover:border-primary/60"
+                  ? "bg-primary/10 border-2 border-primary card-glass-glow scale-105 z-10"
+                  : "bg-card border border-primary/30 hover:border-primary/60 card-glass"
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >

@@ -126,6 +126,86 @@
     mask-composite: exclude;
     pointer-events: none;
   }
+
+  /* 3D glassmorphism relief border */
+  .card-glass {
+    position: relative;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.40);
+  }
+
+  .card-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.30) 30%,
+      rgba(255, 255, 255, 0.50) 50%,
+      rgba(255, 255, 255, 0.30) 70%,
+      transparent
+    );
+    pointer-events: none;
+    z-index: 3;
+    border-radius: 999px;
+  }
+
+  .card-glass:hover {
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.60),
+      0 0 0 1px rgba(255, 255, 255, 0.07),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.50);
+  }
+
+  /* Glassmorphism relief + primary blue glow (cards destacadas y botones glow) */
+  .card-glass-glow {
+    position: relative;
+    box-shadow:
+      0 0 20px hsl(228 90% 51% / 0.4),
+      0 0 40px hsl(228 90% 51% / 0.2),
+      0 8px 32px rgba(0, 0, 0, 0.50),
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.40);
+  }
+
+  .card-glass-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.30) 30%,
+      rgba(255, 255, 255, 0.55) 50%,
+      rgba(255, 255, 255, 0.30) 70%,
+      transparent
+    );
+    pointer-events: none;
+    z-index: 3;
+    border-radius: 999px;
+  }
+
+  .card-glass-glow:hover {
+    box-shadow:
+      0 0 30px hsl(228 90% 51% / 0.6),
+      0 0 60px hsl(228 90% 51% / 0.3),
+      0 12px 40px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.20),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.45);
+  }
 }
 
 /* Marquee animation */

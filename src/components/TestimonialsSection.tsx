@@ -87,7 +87,7 @@ const TestimonialsSection = () => {
 
           {/* Carousel */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl bg-card border border-border/50 p-8 md:p-12">
+            <div className="overflow-hidden rounded-2xl bg-card border border-border/50 p-8 md:p-12 card-glass">
               <Quote className="w-12 h-12 text-primary/30 mb-6" />
               
               <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8">
@@ -142,7 +142,7 @@ const TestimonialsSection = () => {
             </h3>
           </div>
 
-          <div className="bg-primary/10 rounded-2xl border-2 border-primary glow-primary p-4 md:p-6">
+          <div className="bg-primary/10 rounded-2xl border-2 border-primary card-glass-glow p-4 md:p-6">
             <div className="relative">
               <button
                 onClick={() => scrollPhotos("left")}
@@ -187,7 +187,7 @@ const TestimonialsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all group"
+              className="text-center p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all group card-glass"
             >
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <stat.icon className="w-7 h-7 text-primary" />

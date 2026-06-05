@@ -52,7 +52,7 @@ const CoachesSection = () => {
           {coaches.map((coach, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-card border border-border/50 hover:border-primary/50 card-glass transition-all duration-500"
             >
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
