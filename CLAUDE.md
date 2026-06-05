@@ -34,10 +34,10 @@ public/assets/          # Imágenes en formato WebP
 
 | Clase Tailwind | Fuente | Uso |
 |----------------|--------|-----|
-| `font-display` | Helvetica Bold (local) | Todos los titulares |
+| `font-display` | Orbitron 700/900 (Google Fonts) | Todos los titulares |
 | `font-sans` | Inter | Cuerpo y UI general |
 
-La fuente `font-display` está configurada en `tailwind.config.ts` y se sirve localmente desde `public/fonts/Helvetica-Bold.ttf` vía `@font-face` en `app/globals.css`.
+La fuente `font-display` está configurada en `tailwind.config.ts` y se carga desde Google Fonts en `app/globals.css`.
 
 ## Diseño
 
