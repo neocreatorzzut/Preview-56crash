@@ -34,7 +34,7 @@ const EquipmentSection = () => {
           {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center border border-border card-glass">
+            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
               <BenefitItem
                 title="Equipo de última generación"
                 description="Para garantizar tu seguridad y maximizar tus resultados."
@@ -46,7 +46,7 @@ const EquipmentSection = () => {
               />
             </div>
             {/* Image */}
-            <div className="relative overflow-hidden rounded-2xl border border-border/30 card-glass min-h-[280px]">
+            <div className="relative overflow-hidden rounded-2xl card-glass min-h-[280px]">
               <img
                 src={gymEquipment}
                 alt="Interior del gimnasio"
@@ -61,7 +61,7 @@ const EquipmentSection = () => {
           {/* Row 2 - Inverted */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Image with badge */}
-            <div className="relative overflow-hidden rounded-2xl border border-border/30 card-glass min-h-[280px]">
+            <div className="relative overflow-hidden rounded-2xl card-glass min-h-[280px]">
               <img
                 src={gymInterior2}
                 alt="Recepción del gimnasio"
@@ -72,7 +72,7 @@ const EquipmentSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             </div>
             {/* Text Block */}
-            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center border border-border card-glass">
+            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
               <BenefitItem
                 title="Mecanismos Cardiovasculares"
                 description="Planeaciones de entrenamiento premium con mecanismos cardiovasculares."
@@ -88,7 +88,7 @@ const EquipmentSection = () => {
           {/* Row 3 */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Text Block */}
-            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center border border-border card-glass">
+            <div className="bg-black/20 rounded-2xl p-8 flex flex-col justify-center card-glass">
               <BenefitItem
                 title="Tracking Personalizado"
                 description="Supervisión de progreso personal con profesionales."
@@ -100,7 +100,7 @@ const EquipmentSection = () => {
               />
             </div>
             {/* Image */}
-            <div className="relative overflow-hidden rounded-2xl border border-border/30 card-glass min-h-[280px]">
+            <div className="relative overflow-hidden rounded-2xl card-glass min-h-[280px]">
               <img
                 src={gymInterior3}
                 alt="Área de entrenamiento"
