@@ -142,7 +142,7 @@ const TestimonialsSection = () => {
             </h3>
           </div>
 
-          <div className="bg-primary/10 rounded-2xl card-glass-glow p-4 md:p-6">
+          <div className="bg-white rounded-2xl card-glass-glow p-4 md:p-6">
             <div className="relative">
               <button
                 onClick={() => scrollPhotos("left")}
@@ -159,7 +159,7 @@ const TestimonialsSection = () => {
                 {communityPhotos.map((photo, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl border border-border/50 snap-center"
+                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl card-glass snap-center"
                   >
                     <img
                       src={photo}
