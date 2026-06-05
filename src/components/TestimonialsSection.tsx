@@ -159,7 +159,7 @@ const TestimonialsSection = () => {
                 {communityPhotos.map((photo, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl card-glass snap-center"
+                    className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl snap-center"
                   >
                     <img
                       src={photo}
