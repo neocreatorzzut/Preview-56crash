@@ -58,6 +58,7 @@ export default function FAQButton() {
           border: "1px solid rgba(255,255,255,0.15)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
+          borderRadius: "50%",
         }}
       >
         {/* Placeholder icon — replace src when you send the asset */}
@@ -78,12 +79,12 @@ export default function FAQButton() {
         <div
           className="fixed z-[201] bg-white text-black overflow-hidden flex flex-col"
           style={{
-            /* Mobile: full width with 16px margin, max 80vh */
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "min(420px, calc(100vw - 32px))",
             maxHeight: "80vh",
+            borderRadius: "1.25rem",
           }}
         >
           {/* Header */}
@@ -93,7 +94,7 @@ export default function FAQButton() {
             </h2>
             <button
               onClick={() => setOpen(false)}
-              className="flex h-8 w-8 items-center justify-center hover:bg-gray-100 transition-colors"
+              className="flex h-8 w-8 items-center justify-center hover:bg-gray-100 transition-colors rounded-full"
             >
               <X className="h-4 w-4 text-black" />
             </button>

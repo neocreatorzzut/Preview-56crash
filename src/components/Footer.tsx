@@ -57,7 +57,7 @@ const Footer = () => {
                   key={i}
                   href={s.href}
                   aria-label={s.label}
-                  style={{ border: "1px solid #2a2a2a", color: "#555", width: 36, height: 36 }}
+                  style={{ border: "1px solid #2a2a2a", color: "#555", width: 36, height: 36, borderRadius: "50%" }}
                   className="flex items-center justify-center hover:border-white hover:text-white transition-all duration-200"
                 >
                   <s.icon className="w-4 h-4" />
@@ -116,6 +116,7 @@ const Footer = () => {
               padding: "0.2rem 0.7rem",
               letterSpacing: "0.14em",
               textTransform: "uppercase",
+              borderRadius: "9999px",
             }}
           >
             Antioquia · Colombia
