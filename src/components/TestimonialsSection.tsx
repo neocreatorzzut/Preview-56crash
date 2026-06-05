@@ -142,7 +142,7 @@ const TestimonialsSection = () => {
             </h3>
           </div>
 
-          <div className="bg-white rounded-2xl card-glass-glow p-4 md:p-6">
+          <div className="bg-black rounded-2xl card-glass-glow p-4 md:p-6">
             <div className="relative">
               <button
                 onClick={() => scrollPhotos("left")}
