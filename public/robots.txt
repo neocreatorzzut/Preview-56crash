@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crashtraining.com.co/sitemap.xml
+Sitemap: https://www.crashtraining.pro/sitemap.xml
